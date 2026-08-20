@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "omoda-04-ev",
+    "nama": "OMODA 04 EV",
+    "namaPendek": "04 EV",
+    "kategori": "SUV Listrik",
+    "powertrain": "ev",
+    "status": "pre-order",
+    "tagline": "Cyber Mecha Design dengan jangkauan 553 km sekali cas.",
+    "hargaOtr": null,
+    "hargaCatatan": "Harga OTR Semarang diumumkan menjelang peluncuran resmi.",
+    "gambar": {
+      "thumbnail": "/omoda-04-cutout.webp",
+      "heroDesktop": "/hero-banner-desktop.webp",
+      "heroMobile": "/hero-stage.jpeg",
+      "galeri": [
+        {
+          "src": "/omoda-04-cutout.webp",
+          "alt": "OMODA 04 EV tampak tiga perempat depan dgn latar bersih.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/hero-banner-desktop.webp",
+          "alt": "OMODA 04 EV biru di ruang pamer.",
+          "judul": "Ruang Pamer"
+        },
+        {
+          "src": "/hero-stage.jpeg",
+          "alt": "OMODA 04 EV biru di panggung peluncuran.",
+          "judul": "Panggung Peluncuran"
+        }
+      ]
+    },
+    "highlight": [
+      "Cyber Mecha Design",
+      "Jangkauan 553 km (NEDC)",
+      "AI Smart Cockpit",
+      "Fast charging DC",
+      "Paket ADAS berkendara"
+    ],
+    "specs": [
+      {
+        "kategori": "Motor & Performa",
+        "items": [
+          {
+            "label": "Tenaga Maksimum",
+            "value": "218 PS"
+          },
+          {
+            "label": "Torsi",
+            "value": "275 Nm"
+          },
+          {
+            "label": "Penggerak",
+            "value": "Motor listrik"
+          }
+        ]
+      },
+      {
+        "kategori": "Baterai & Jarak Tempuh",
+        "items": [
+          {
+            "label": "Kapasitas Baterai",
+            "value": "65,05 kWh (LFP)"
+          },
+          {
+            "label": "Jarak Tempuh (NEDC)",
+            "value": "553 km"
+          },
+          {
+            "label": "Pengisian Cepat",
+            "value": "DC fast charging"
+          }
+        ]
+      },
+      {
+        "kategori": "Kabin & Teknologi",
+        "items": [
+          {
+            "label": "Layar Sentuh",
+            "value": "13,2 inci"
+          },
+          {
+            "label": "Kamera Parkir",
+            "value": "540 derajat"
+          },
+          {
+            "label": "Pengisian Nirkabel",
+            "value": "Tersedia"
+          },
+          {
+            "label": "Ambient Light",
+            "value": "Multicolor"
+          }
+        ]
+      },
+      {
+        "kategori": "Keselamatan",
+        "items": [
+          {
+            "label": "Fitur ADAS",
+            "value": "18 fitur"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Kapan OMODA 04 EV mulai bisa dipesan?",
+        "jawab": "Pre-booking resmi sudah dibuka. Pemesanan dapat dilakukan lewat dealer Sun Semarang, dan unit dikirim mengikuti jadwal peluncuran resmi di Indonesia."
+      },
+      {
+        "tanya": "Berapa jarak tempuh sekali pengisian penuh?",
+        "jawab": "553 km berdasarkan pengukuran NEDC. Angka nyata di jalan menyesuaikan gaya berkendara, beban, dan penggunaan pendingin kabin."
+      },
+      {
+        "tanya": "Apakah harga OTR Semarang sudah keluar?",
+        "jawab": "Belum. Harga resmi diumumkan menjelang peluncuran. Hubungi kami lewat WhatsApp untuk mendapat kabar pertama begitu harganya keluar."
+      }
+    ],
+    "angka": [
+      {
+        "nilai": "553",
+        "satuan": "km",
+        "label": "Jarak tempuh NEDC"
+      },
+      {
+        "nilai": "218",
+        "satuan": "PS",
+        "label": "Tenaga maksimum"
+      },
+      {
+        "nilai": "65,05",
+        "satuan": "kWh",
+        "label": "Kapasitas baterai"
+      },
+      {
+        "nilai": "18",
+        "satuan": "fitur",
+        "label": "Paket ADAS"
+      }
+    ],
+    "warna": [
+      {
+        "nama": "Vivid Blue",
+        "kode": "#1668c8"
+      },
+      {
+        "nama": "Pearl White",
+        "kode": "#eceff2"
+      },
+      {
+        "nama": "Space Grey",
+        "kode": "#5b6068"
+      },
+      {
+        "nama": "Obsidian Black",
+        "kode": "#15181c"
+      }
+    ]
+  }
+]

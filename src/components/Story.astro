@@ -1,0 +1,18 @@
+---
+const pilar = ['Future', 'Fashion', 'Green', 'Technology'];
+---
+<section class="story">
+  <img class="story__img" src="/hero-banner-desktop.webp" alt="OMODA 04 EV di ruang pamer."
+       width="1512" height="851" loading="lazy" decoding="async" />
+  <div class="story__body">
+    <p class="eyebrow">Tentang OMODA</p>
+    <h2 class="story__title">Cerita Kami</h2>
+    <p class="story__text">
+      OMODA adalah seri crossover untuk generasi baru yang menuntut lebih dari sekadar kendaraan.
+      Dibangun di atas empat pilar berikut, OMODA menghadirkan desain berani dan teknologi terdepan
+      dalam satu paket yang siap dipakai setiap hari.
+    </p>
+    <ul class="story__pillars">{pilar.map((p) => <li>{p}</li>)}</ul>
+    <a class="btn btn--ghost-light" href="/tentang">Baca Cerita Lengkap</a>
+  </div>
+</section>

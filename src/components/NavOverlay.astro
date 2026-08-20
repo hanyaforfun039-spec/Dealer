@@ -1,0 +1,23 @@
+---
+/* Menu memuat tautan halaman DAN pintasan ke bagian di beranda. Pintasan
+   diberi awalan "/" supaya tetap bekerja saat dibuka dari halaman lain. */
+import { site } from '../lib/site';
+import { getAllCars } from '../lib/cars';
+import { waLink } from '../lib/whatsapp';
+const cars = getAllCars();
+const a = site.address;
+---
+<nav class="nav" id="nav" aria-label="Menu utama">
+  <ul class="nav__list">
+    <li><a class="nav__link" href="/">Beranda</a></li>
+    {cars.map((c) => <li><a class="nav__link" href={`/mobil/${c.slug}`}>{c.nama}</a></li>)}
+    <li><a class="nav__link" href="/#reward">Reward Pre-Order</a></li>
+    <li><a class="nav__link" href="/#giias">GIIAS 2026</a></li>
+    <li><a class="nav__link" href="/tentang">Tentang &amp; Kontak</a></li>
+  </ul>
+  <div class="nav__foot">
+    {site.dealerName}<br />
+    {a.street}
+    <a href={waLink()} target="_blank" rel="noopener">Hubungi via WhatsApp</a>
+  </div>
+</nav>

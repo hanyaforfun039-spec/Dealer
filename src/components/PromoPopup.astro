@@ -1,0 +1,18 @@
+---
+/* Pop-up promo. Muncul tiap halaman dibuka; menutupnya hanya berlaku untuk
+   kunjungan itu (tanpa localStorage) — jadi ganti gambar kampanye kapan pun
+   langsung terlihat semua pengunjung. Isi diambil dari site.json. */
+import { site } from '../lib/site';
+import { waLink } from '../lib/whatsapp';
+const p = site.promoPopup;
+---
+{p.aktif && (
+  <div class="pop" id="pop" hidden>
+    <div class="pop__veil" data-pop-close aria-hidden="true"></div>
+    <div class="pop__box" role="dialog" aria-modal="true" aria-label="Penawaran pre-order OMODA 04 EV">
+      <button class="pop__close" type="button" data-pop-close aria-label="Tutup penawaran">&times;</button>
+      <img class="pop__img" src={p.gambar} alt={p.alt} width={p.lebar} height={p.tinggi} decoding="async" />
+      <a class="pop__cta" href={waLink(p.ctaPesan)} target="_blank" rel="noopener">{p.ctaLabel}</a>
+    </div>
+  </div>
+)}

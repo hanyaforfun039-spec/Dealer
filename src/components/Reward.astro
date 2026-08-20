@@ -1,0 +1,32 @@
+---
+/* Nilai reward dirender penuh di HTML, bukan mulai dari "0".
+   Skrip hanya MENGANIMASIKAN dari 0 ke nilai itu saat terlihat. Versi
+   aslinya menaruh "0" di markup, sehingga tanpa JavaScript halaman
+   menampilkan "Rp 0" — angka yang salah, bukan sekadar tanpa animasi. */
+import { site } from '../lib/site';
+import { waLink } from '../lib/whatsapp';
+const r = site.reward;
+const nilaiTeks = r.nilai.toLocaleString('id-ID');
+---
+<section class="reward" id="reward">
+  <div class="wrap">
+    <div class="reward__head">
+      <p class="eyebrow">{r.eyebrow}</p>
+      <h2 class="sec-title">{r.judul}</h2>
+      <p class="sec-lede">{r.lede}</p>
+    </div>
+    <div class="reward__split">
+      <div>
+        <p class="reward__quota">{r.kuota}</p>
+        <p class="reward__amount">Rp <span class="reward__amount-num" data-target={r.nilai}>{nilaiTeks}</span></p>
+        <p class="reward__amount-label">{r.nilaiLabel}</p>
+        <div class="reward__cta">
+          <a class="btn btn--dark" href={waLink(site.promoPopup.ctaPesan)} target="_blank" rel="noopener">Klaim Reward</a>
+        </div>
+        <a class="reward__source" href={r.sumber} target="_blank" rel="noopener">Lihat rincian resmi program pre-order</a>
+      </div>
+      <ul class="reward__perks">{r.perks.map((p) => <li>{p}</li>)}</ul>
+    </div>
+    <p class="reward__disclaimer">{r.disclaimer}</p>
+  </div>
+</section>

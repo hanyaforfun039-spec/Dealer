@@ -1,0 +1,7 @@
+---
+import { getAllCars } from '../lib/cars';
+const car = getAllCars()[0];
+---
+<section class="specs-strip">
+  <ul>{car.highlight.map((h) => <li><span class="mark"></span>{h}</li>)}</ul>
+</section>

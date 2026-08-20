@@ -1,0 +1,25 @@
+---
+import { site } from '../lib/site';
+import { waLink } from '../lib/whatsapp';
+const e = site.event;
+---
+{e.aktif && (
+  <section class="event" id="giias">
+    <div class="wrap">
+      <div class="event__media">
+        <img src={e.gambar} alt={`${e.judul}. ${e.teks}`} width={e.lebar} height={e.tinggi} loading="lazy" decoding="async" />
+      </div>
+      <div class="event__copy">
+        <p class="eyebrow event__eyebrow">{e.eyebrow}</p>
+        <h2 class="event__title">{e.judul}</h2>
+        <p class="event__text">{e.teks}</p>
+        <ul class="event__meta">
+          {e.meta.map((m) => <li><strong>{m.label}</strong>{m.nilai}</li>)}
+        </ul>
+        <div class="event__cta">
+          <a class="btn btn--solid" href={waLink(e.ctaPesan)} target="_blank" rel="noopener">{e.ctaLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+)}

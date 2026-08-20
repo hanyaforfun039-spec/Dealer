@@ -1,0 +1,12 @@
+---
+import { site } from '../lib/site';
+import { waLink } from '../lib/whatsapp';
+const p = site.floatingPromo;
+---
+{p.aktif && (
+  <aside class="promo" id="promo">
+    <button class="promo__close" id="promoClose" aria-label="Tutup penawaran">&times;</button>
+    <img src={p.gambar} alt={p.alt} loading="lazy" decoding="async" />
+    <a class="promo__cta" href={waLink(p.ctaPesan)} target="_blank" rel="noopener">{p.ctaLabel}</a>
+  </aside>
+)}

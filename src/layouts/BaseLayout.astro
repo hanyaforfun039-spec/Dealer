@@ -1,0 +1,146 @@
+---
+/* =============================================================================
+   omoda-semarang · TATA LETAK DASAR
+   Kerangka semua halaman + seluruh metadata SEO dipusatkan di sini, supaya
+   tidak ada halaman yang kelupaan canonical, Open Graph, atau data terstruktur.
+   ============================================================================ */
+import '../styles/global.css';
+import { site } from '../lib/site';
+import Header from '../components/Header.astro';
+import NavOverlay from '../components/NavOverlay.astro';
+import Footer from '../components/Footer.astro';
+import PromoPopup from '../components/PromoPopup.astro';
+import FloatingPromo from '../components/FloatingPromo.astro';
+import WaFab from '../components/WaFab.astro';
+
+interface Props {
+  judul: string;
+  deskripsi?: string;
+  /** Halaman berhero gambar penuh butuh header transparan di awal. */
+  headerTransparan?: boolean;
+  noindex?: boolean;
+  /** Data terstruktur JSON-LD khas halaman ini (Product, AutoDealer, dst). */
+  skema?: Record<string, unknown> | Record<string, unknown>[];
+  /** Gambar khusus untuk pratinjau saat dibagikan. */
+  ogImage?: string;
+  /** Pakai `judul` apa adanya tanpa menempelkan akhiran situs. Dipakai di
+      beranda, yang judulnya sudah memuat nama situs sehingga penambahan
+      akhiran hanya membuatnya berulang dan melewati batas panjang. */
+  judulUtuh?: boolean;
+  /** Pop-up promo. Mati secara bawaan dan hanya dinyalakan di landing page —
+      memunculkannya di setiap halaman membuat orang yang menjelajah harus
+      menutupnya berulang kali. */
+  popup?: boolean;
+}
+
+const {
+  judul,
+  deskripsi = site.seo.defaultDescription,
+  headerTransparan = false,
+  noindex = false,
+  skema,
+  ogImage = '/og-omoda-04.jpg',
+  popup = false,
+  judulUtuh = false,
+} = Astro.props;
+
+const judulPenuh = judulUtuh ? judul : `${judul} | ${site.seo.titleSuffix}`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const gambarOg = new URL(ogImage, Astro.site).href;
+
+/* Data terstruktur yang berlaku di SELURUH halaman: identitas organisasi dan
+   situsnya. Skema khas halaman ditambahkan lewat prop `skema`. */
+const skemaGlobal = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': new URL('/#organisasi', Astro.site).href,
+    name: site.dealerName,
+    url: new URL('/', Astro.site).href,
+    logo: new URL('/logo-omoda-jaecoo.png', Astro.site).href,
+    telephone: '+' + site.whatsapp,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.address.street,
+      addressLocality: site.address.locality,
+      addressRegion: site.address.region,
+      postalCode: site.address.postalCode,
+      addressCountry: site.address.country,
+    },
+    sameAs: Object.values(site.social).filter(Boolean),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': new URL('/#situs', Astro.site).href,
+    url: new URL('/', Astro.site).href,
+    name: site.brand,
+    inLanguage: 'id-ID',
+    publisher: { '@id': new URL('/#organisasi', Astro.site).href },
+  },
+];
+
+const semuaSkema = skema ? [...skemaGlobal, ...(Array.isArray(skema) ? skema : [skema])] : skemaGlobal;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{judulPenuh}</title>
+    <meta name="description" content={deskripsi} />
+    <link rel="canonical" href={canonical} />
+    <meta
+      name="robots"
+      content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'}
+    />
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content={site.dealerName} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={judulPenuh} />
+    <meta property="og:description" content={deskripsi} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={gambarOg} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OMODA 04 EV biru tampak tiga perempat depan." />
+    <meta property="og:site_name" content={site.brand} />
+    <meta property="og:locale" content={site.seo.locale} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={judulPenuh} />
+    <meta name="twitter:description" content={deskripsi} />
+    <meta name="twitter:image" content={gambarOg} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(semuaSkema)} />
+  </head>
+
+  <body>
+    <Header transparan={headerTransparan} />
+    <NavOverlay />
+
+    <main id="top">
+      <slot />
+    </main>
+
+    <Footer />
+    {popup && <PromoPopup />}
+    <FloatingPromo />
+    <WaFab />
+
+    <script>
+      import '../scripts/ui.ts';
+    </script>
+  </body>
+</html>

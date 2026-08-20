@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OMODA">
+  <rect width="64" height="64" fill="#000"/>
+  <path d="M32 14c9.94 0 18 8.06 18 18s-8.06 18-18 18-18-8.06-18-18 8.06-18 18-18zm0 7c-6.08 0-11 4.92-11 11s4.92 11 11 11 11-4.92 11-11-4.92-11-11-11z" fill="#fff"/>
+  <rect x="30" y="6" width="4" height="12" fill="#e4002b"/>
+</svg>

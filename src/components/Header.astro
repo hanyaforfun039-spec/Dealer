@@ -1,0 +1,13 @@
+---
+import { site } from '../lib/site';
+interface Props { transparan?: boolean }
+const { transparan = false } = Astro.props;
+---
+<header class:list={['header', !transparan && 'is-solid']} id="header" data-transparan={transparan ? '' : undefined}>
+  <a href="/" class="logo" aria-label={`${site.brand} beranda`}>
+    <img src="/logo-omoda-jaecoo.png" alt="OMODA | JAECOO" width="882" height="49" />
+  </a>
+  <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">
+    <span></span><span></span><span></span>
+  </button>
+</header>

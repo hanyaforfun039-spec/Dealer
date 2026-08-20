@@ -1,0 +1,27 @@
+---
+import { site } from '../lib/site';
+import { waLink } from '../lib/whatsapp';
+const a = site.address;
+---
+<section class="dealer" id="dealer">
+  <div class="wrap">
+    <div class="dealer__head">
+      <p class="eyebrow">Dealer {a.locality}</p>
+      <h2 class="sec-title">Konsultasi &amp; Pemesanan</h2>
+      <p class="sec-lede">Satu titik untuk konsultasi, test drive, pemesanan, sampai layanan purna jual.</p>
+    </div>
+    <div class="dealer__grid">
+      <iframe class="dealer__map" src={site.mapEmbed}
+        title={`Peta lokasi ${site.dealerName}, ${a.street}`}
+        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="dealer__info">
+        <ul class="dealer__list">
+          <li><strong>Alamat</strong>{a.street}, {a.locality}, {a.region} {a.postalCode}</li>
+          {site.openingHours.map((j) => <li><strong>Jam operasional</strong>{j.hari}, {j.buka}&ndash;{j.tutup} WIB</li>)}
+          <li><strong>Layanan</strong>Konsultasi produk, test drive, pre-order, kredit, purna jual</li>
+        </ul>
+        <a class="btn btn--dark btn--wide" href={waLink('Halo, saya mau tanya lokasi dan jam kunjungan dealer OMODA Semarang.')} target="_blank" rel="noopener">Hubungi Dealer</a>
+      </div>
+    </div>
+  </div>
+</section>

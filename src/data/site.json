@@ -1,0 +1,178 @@
+{
+  "brand": "OMODA Semarang",
+  "dealerName": "Dealer Resmi OMODA Semarang",
+  "grup": "Sun Motor Group",
+  "salesName": "tim kami",
+  "whatsapp": "628XXXXXXXXXX",
+  "phoneDisplay": "GANTI NOMOR DEALER",
+  "waDefault": "Halo, saya mau tanya tentang OMODA 04 EV di Semarang.",
+  "address": {
+    "street": "Jl. Madukoro Raya No. 45, Tawangsari, Kec. Semarang Barat",
+    "locality": "Semarang",
+    "region": "Jawa Tengah",
+    "postalCode": "50144",
+    "country": "ID"
+  },
+  "openingHours": [
+    {
+      "hari": "Senin - Sabtu",
+      "buka": "08:00",
+      "tutup": "17:00"
+    }
+  ],
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.401737235811!2d110.38903647454146!3d-6.96184546816202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f500523d9d1d%3A0x58749a72235a7df7!2sJAECOO%20SEMARANG!5e0!3m2!1sid!2sid!4v1785789875955!5m2!1sid!2sid",
+  "social": {
+    "instagram": "https://www.instagram.com/jaecoosemarangraya",
+    "tiktok": "https://www.tiktok.com/@jaecoosemarangraya"
+  },
+  "seo": {
+    "titleSuffix": "OMODA Semarang",
+    "defaultDescription": "Dealer resmi OMODA di Semarang, bagian dari Sun Motor Group. Informasi OMODA 04 EV, reward pre-order, test drive, kredit, dan layanan purna jual.",
+    "locale": "id_ID",
+    "judulBeranda": "OMODA Semarang - Dealer Resmi OMODA 04 EV",
+    "deskripsiBeranda": "Dealer resmi OMODA di Semarang. Kenali OMODA 04 EV, klaim reward pre-order untuk 1.000 pemesan pertama, dan jadwalkan test drive di showroom Madukoro.",
+    "deskripsiTentang": "Profil Dealer Resmi OMODA Semarang: showroom, layanan penjualan dan purna jual, area yang dilayani di Jawa Tengah, serta lokasi dan jam operasional.",
+    "modelPembuka": "resmi di Semarang.",
+    "modelPenutup": "Lihat spesifikasi lengkap, pilihan warna, dan galeri fotonya di sini."
+  },
+  "promoPopup": {
+    "aktif": false,
+    "gambar": "/poster-pre-order.jpeg",
+    "lebar": 735,
+    "tinggi": 900,
+    "alt": "Reward pre-order OMODA 04 EV: gratis upgrade senilai hingga IDR 50 juta untuk 1.000 pemesan pertama.",
+    "ctaLabel": "Klaim Reward Pre-Order",
+    "ctaPesan": "Halo, saya mau ikut pre-order OMODA 04 EV dan masuk kuota 1.000 pertama. Boleh dibantu prosesnya?"
+  },
+  "floatingPromo": {
+    "aktif": false,
+    "gambar": "/poster-giias.jpeg",
+    "alt": "Pre-book OMODA 04 EV di GIIAS 2026.",
+    "ctaLabel": "Pre-Order Sekarang",
+    "ctaPesan": "Halo, saya mau pre-order OMODA 04 EV sekarang."
+  },
+  "reward": {
+    "eyebrow": "Pre-Order Online Exclusive",
+    "judul": "Reward Pre-Order",
+    "lede": "Reward ini hanya berlaku untuk 1.000 pemesan pertama secara nasional, termasuk kuota untuk wilayah Semarang.",
+    "kuota": "1.000 Pemesan Pertama",
+    "nilai": 50000000,
+    "nilaiLabel": "Nilai reward hingga",
+    "perks": [
+      "AI Internet Subscription 1 Tahun",
+      "Wall Charger 3-in-1 (Upgraded)",
+      "AI Features (Upgraded)",
+      "Smart Panoramic Roof (Upgraded)",
+      "OMODA 4 Limited Item Diecast"
+    ],
+    "sumber": "/poster-tingkatan.jpeg",
+    "disclaimer": "Syarat dan ketentuan berlaku."
+  },
+  "event": {
+    "aktif": true,
+    "eyebrow": "Pameran",
+    "judul": "Pre-Book di GIIAS 2026",
+    "teks": "Jumpai OMODA 04 EV langsung di pameran otomotif terbesar tahun ini. Pemesanan JAECOO J5 selama event berlangsung juga mendapat free body kit.",
+    "gambar": "/poster-giias.jpeg",
+    "lebar": 854,
+    "tinggi": 1280,
+    "meta": [
+      {
+        "label": "Tanggal",
+        "nilai": "30 Juli - 9 Agustus 2026"
+      },
+      {
+        "label": "Lokasi",
+        "nilai": "ICE BSD City"
+      },
+      {
+        "label": "Promo J5",
+        "nilai": "Free body kit (front bumper, side skirt, rear bumper)"
+      }
+    ],
+    "ctaLabel": "Tanya Pre-Book GIIAS",
+    "ctaPesan": "Halo, saya mau ikut pre-book OMODA 04 EV di GIIAS 2026. Boleh dibantu prosesnya dari Semarang?"
+  },
+  "layanan": [
+    {
+      "judul": "Konsultasi & Test Drive",
+      "teks": "Penjelasan produk tanpa terburu-buru, perbandingan varian, dan test drive dengan perjanjian agar unit disiapkan lebih dulu."
+    },
+    {
+      "judul": "Kredit & Tukar Tambah",
+      "teks": "Simulasi tunai maupun kredit, pengajuan lewat rekanan pembiayaan, dan penilaian kendaraan lama untuk tukar tambah."
+    },
+    {
+      "judul": "Pemesanan & Pengiriman",
+      "teks": "Pendampingan dari pemesanan, pemantauan unit, pengurusan dokumen, sampai serah terima. Pengiriman ke luar kota tersedia."
+    },
+    {
+      "judul": "Layanan Purna Jual",
+      "teks": "Servis berkala, penanganan garansi, dan ketersediaan suku cadang resmi melalui jaringan Sun Motor Group."
+    }
+  ],
+  "areaLayanan": [
+    {
+      "kota": "Semarang",
+      "catatan": "Kota showroom. Test drive, pengecekan unit, dan serah terima langsung di Madukoro."
+    },
+    {
+      "kota": "Ungaran",
+      "catatan": "Sekitar 30 menit dari showroom. Kunjungan sales ke rumah atau kantor atas permintaan."
+    },
+    {
+      "kota": "Kendal",
+      "catatan": "Sekitar 45 menit. Pengiriman unit sampai alamat setelah administrasi selesai."
+    },
+    {
+      "kota": "Demak",
+      "catatan": "Sekitar 45 menit. Konsultasi dan pengurusan dokumen dapat dilakukan jarak jauh."
+    },
+    {
+      "kota": "Salatiga",
+      "catatan": "Sekitar 1 jam. Penjadwalan test drive menyesuaikan waktu kunjungan Anda."
+    },
+    {
+      "kota": "Kudus",
+      "catatan": "Sekitar 1,5 jam. Pengiriman unit dan pendampingan administrasi tersedia."
+    },
+    {
+      "kota": "Surakarta (Solo)",
+      "catatan": "Sekitar 2 jam. Melayani pemesanan luar kota dengan pengiriman sampai alamat."
+    },
+    {
+      "kota": "Magelang",
+      "catatan": "Sekitar 2 jam. Konsultasi lewat WhatsApp, unit dikirim setelah siap."
+    },
+    {
+      "kota": "Pekalongan",
+      "catatan": "Sekitar 2 jam. Pemesanan jarak jauh dengan pengiriman unit ke alamat."
+    },
+    {
+      "kota": "Pati",
+      "catatan": "Sekitar 2 jam. Pendampingan proses dari pemesanan sampai serah terima."
+    }
+  ],
+  "faqUmum": [
+    {
+      "tanya": "Apakah ini dealer resmi OMODA di Semarang?",
+      "jawab": "Ya. Showroom kami berada di Jl. Madukoro Raya No. 45, Tawangsari, Semarang Barat, dan merupakan bagian dari jaringan Sun Motor Group. Penjualan, pemesanan, dan layanan purna jual ditangani di satu tempat."
+    },
+    {
+      "tanya": "Apa saja yang bisa diurus langsung di showroom?",
+      "jawab": "Konsultasi produk, test drive, simulasi kredit, tukar tambah, pemesanan unit, pengurusan dokumen, sampai servis berkala dan klaim garansi setelah kendaraan diterima."
+    },
+    {
+      "tanya": "Reward pre-order OMODA 04 EV berlaku sampai kapan?",
+      "jawab": "Reward tertinggi berlaku untuk 1.000 pemesan pertama secara nasional dan berkurang pada tingkatan berikutnya. Karena kuotanya nasional, sisa kuota berubah sewaktu-waktu; sebaiknya dikonfirmasi lebih dulu sebelum memesan."
+    },
+    {
+      "tanya": "Apakah melayani pembeli dari luar kota Semarang?",
+      "jawab": "Ya. Kami melayani Solo, Kudus, Kendal, Demak, Salatiga, Ungaran, Magelang, Pekalongan, dan Pati. Konsultasi serta dokumen dapat diurus jarak jauh, dan unit dikirim sampai alamat."
+    },
+    {
+      "tanya": "Bagaimana layanan servis dan suku cadangnya?",
+      "jawab": "Servis berkala, penanganan garansi, dan suku cadang resmi tersedia melalui jaringan Sun Motor Group, sehingga kendaraan tetap tertangani setelah masa pembelian."
+    }
+  ]
+}

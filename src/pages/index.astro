@@ -1,0 +1,71 @@
+---
+/* Landing page dealer — susunan dan gaya dipertahankan seperti versi yang
+   sudah ada, hanya dipecah jadi komponen dan datanya dipindah ke site.json. */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SpecsStrip from '../components/SpecsStrip.astro';
+import LineupHome from '../components/LineupHome.astro';
+import Reward from '../components/Reward.astro';
+import Event from '../components/Event.astro';
+import Story from '../components/Story.astro';
+import DealerSection from '../components/DealerSection.astro';
+import { site } from '../lib/site';
+import { getAllCars } from '../lib/cars';
+
+const utama = getAllCars()[0];
+
+const skema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: utama.nama,
+    description: utama.tagline,
+    brand: { '@type': 'Brand', name: 'OMODA' },
+    image: new URL('/og-omoda-04.jpg', Astro.site).href,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'IDR',
+      availability: 'https://schema.org/PreOrder',
+      url: new URL(`/mobil/${utama.slug}`, Astro.site).href,
+      seller: { '@id': new URL('/#organisasi', Astro.site).href },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: site.faqUmum.map((f) => ({
+      '@type': 'Question',
+      name: f.tanya,
+      acceptedAnswer: { '@type': 'Answer', text: f.jawab },
+    })),
+  },
+];
+---
+<BaseLayout
+  judul={site.seo.judulBeranda}
+  deskripsi={site.seo.deskripsiBeranda}
+  skema={skema}
+  judulUtuh
+  headerTransparan>
+  <Hero />
+  <SpecsStrip />
+  <LineupHome />
+  <Reward />
+  <Event />
+  <Story />
+
+  <section class="faq-sec">
+    <div class="wrap wrap--sempit">
+      <p class="eyebrow">Pertanyaan Umum</p>
+      <h2 class="sec-title">Yang Sering Ditanyakan</h2>
+      {site.faqUmum.map((f) => (
+        <details class="faq">
+          <summary>{f.tanya}</summary>
+          <p>{f.jawab}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <DealerSection />
+</BaseLayout>

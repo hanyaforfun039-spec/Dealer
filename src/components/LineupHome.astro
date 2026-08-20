@@ -1,0 +1,40 @@
+---
+import { getAllCars, teksHarga, punyaHarga, labelStatus } from '../lib/cars';
+import { site } from '../lib/site';
+import { waLink, pesanPenawaran } from '../lib/whatsapp';
+const cars = getAllCars();
+---
+<section class="lineup" id="lineup">
+  <div class="wrap">
+    <div class="lineup__head">
+      <p class="eyebrow">Model</p>
+      <h2 class="sec-title">{cars.length > 1 ? 'Lineup OMODA' : cars[0].nama}</h2>
+    </div>
+
+    {cars.map((car) => (
+      <article class="car">
+        <a href={`/mobil/${car.slug}`}>
+          <img class="car__img" src={car.gambar.thumbnail} alt={`${car.nama} biru, tampak tiga perempat depan.`}
+               width="1842" height="1038" loading="lazy" decoding="async" />
+        </a>
+        <p class="car__status">{labelStatus(car)}</p>
+        {punyaHarga(car)
+          ? <><p class="car__from">Mulai dari | *OTR {site.address.locality}</p><p class="car__price">{teksHarga(car)}</p></>
+          : <p class="car__price car__price--menunggu">{teksHarga(car)}</p>}
+        <p class="car__note">*Harga dapat berubah. Konfirmasi harga terkini via WhatsApp.</p>
+
+        <div class="car__divider"></div>
+
+        <div class="specs">
+          <h3>Highlight Specs</h3>
+          <ul>{car.highlight.map((h) => <li>{h}</li>)}</ul>
+        </div>
+
+        <div class="car__actions">
+          <a class="btn btn--dark" href={`/mobil/${car.slug}`}>Lihat Detail Produk</a>
+          <a class="btn btn--ghost" href={waLink(pesanPenawaran(car.namaPendek))} target="_blank" rel="noopener">Tanya Harga</a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,173 @@
+---
+/* =============================================================================
+   omoda-dealer · HALAMAN MODEL
+   Versi dealer, satu tingkat di atas situs sales: ada galeri foto yang bisa
+   diganti, pilihan warna, deretan angka kunci, dan spesifikasi dua kolom.
+   Panel harga di kanan tetap menempel saat digulir.
+   ============================================================================ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllCars, labelStatus, teksHarga, punyaHarga } from '../../lib/cars';
+import { site } from '../../lib/site';
+import { waLink, pesanPreOrder, pesanTestDrive, pesanPenawaran } from '../../lib/whatsapp';
+import type { Car } from '../../lib/types';
+
+export function getStaticPaths() {
+  return getAllCars().map((car) => ({ params: { slug: car.slug }, props: { car } }));
+}
+
+interface Props { car: Car }
+const { car } = Astro.props;
+
+const deskripsi = `${car.nama} ${site.seo.modelPembuka} ${car.tagline} ${site.seo.modelPenutup}`;
+const galeri = car.gambar.galeri ?? [{ src: car.gambar.thumbnail, alt: `${car.nama}.`, judul: 'Tampak Depan' }];
+
+const skema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: car.nama,
+  description: car.tagline,
+  brand: { '@type': 'Brand', name: 'OMODA' },
+  image: galeri.map((g) => new URL(g.src, Astro.site).href),
+  ...(car.warna && { color: car.warna.map((w) => w.nama) }),
+  ...(punyaHarga(car) && {
+    offers: {
+      '@type': 'Offer', priceCurrency: 'IDR', price: car.hargaOtr,
+      availability: 'https://schema.org/PreOrder',
+      seller: { '@id': new URL('/#organisasi', Astro.site).href },
+    },
+  }),
+};
+
+const remah = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: car.nama, item: new URL(`/mobil/${car.slug}`, Astro.site).href },
+  ],
+};
+---
+
+<BaseLayout judul={car.nama} deskripsi={deskripsi} skema={[skema, remah]}>
+  <section class="judul">
+    <div class="wrap">
+      <p class="eyebrow">{labelStatus(car)} &middot; {car.kategori}</p>
+      <h1 class="judul__teks">{car.nama}</h1>
+      <p class="judul__lead">{car.tagline}</p>
+    </div>
+  </section>
+
+  <section class="isi">
+    <div class="wrap isi__grid">
+      <div class="isi__utama">
+        <!-- Galeri: foto besar + pemilih di bawahnya -->
+        <div class="galeri" data-galeri>
+          <div class="galeri__utama">
+            <img data-galeri-utama src={galeri[0].src} alt={galeri[0].alt}
+                 width="1842" height="1038" fetchpriority="high" decoding="async" />
+          </div>
+          {galeri.length > 1 && (
+            <div class="galeri__pilih" role="group" aria-label="Pilih foto">
+              {galeri.map((g, i) => (
+                <button type="button" data-galeri-pilih data-src={g.src} data-alt={g.alt}
+                        aria-current={i === 0 ? 'true' : 'false'}>
+                  <img src={g.src} alt="" width="200" height="113" loading="lazy" decoding="async" />
+                  <span>{g.judul}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {car.angka && car.angka.length > 0 && (
+          <div class="angka__grid">
+            {car.angka.map((a) => (
+              <div class="angka__item">
+                <p class="angka__nilai">{a.nilai}{a.satuan && <span class="angka__satuan">{a.satuan}</span>}</p>
+                <p class="angka__label">{a.label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {car.warna && car.warna.length > 0 && (
+          <>
+            <h2 class="sec-title sec-title--kiri">Pilihan Warna</h2>
+            <ul class="warna">
+              {car.warna.map((w) => (
+                <li class="warna__item">
+                  <span class="warna__bulat" style={`background:${w.kode}`} aria-hidden="true"></span>
+                  <span>{w.nama}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="car__note">Ketersediaan warna mengikuti alokasi unit. Konfirmasi sebelum memesan.</p>
+          </>
+        )}
+
+        <h2 class="sec-title sec-title--kiri">Sorotan</h2>
+        <ul class="poin">{car.highlight.map((h) => <li>{h}</li>)}</ul>
+
+        <h2 class="sec-title sec-title--kiri">Spesifikasi</h2>
+        <div class="spek__grid">
+          {car.specs.map((g) => (
+            <div class="spek__grup">
+              <h3>{g.kategori}</h3>
+              <dl class="spek__daftar">
+                {g.items.map((it) => (
+                  <div class="spek__baris"><dt>{it.label}</dt><dd>{it.value}</dd></div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+
+        {car.faq && car.faq.length > 0 && (
+          <>
+            <h2 class="sec-title sec-title--kiri">Pertanyaan Umum</h2>
+            {car.faq.map((f) => (
+              <details class="faq"><summary>{f.tanya}</summary><p>{f.jawab}</p></details>
+            ))}
+          </>
+        )}
+      </div>
+
+      <aside class="isi__samping">
+        <div class="isi__lekat">
+          <p class="panel__nama">{car.nama}</p>
+          {punyaHarga(car) && <p class="panel__harga-label">Harga OTR {site.address.locality} mulai</p>}
+          <p class:list={['panel__harga', !punyaHarga(car) && 'panel__harga--menunggu']}>{teksHarga(car)}</p>
+
+          <div class="btn-row--tegak">
+            <a class="btn btn--dark" href={waLink(pesanPreOrder(car.namaPendek))} target="_blank" rel="noopener">
+              Pre-Order {car.namaPendek}
+            </a>
+            <a class="btn btn--ghost" href={waLink(pesanTestDrive(car.namaPendek))} target="_blank" rel="noopener">
+              Test Drive
+            </a>
+          </div>
+
+          <ul class="panel__poin">
+            <li>Reward pre-order 1.000 pemesan pertama</li>
+            <li>Simulasi kredit &amp; tukar tambah</li>
+            <li>Pengiriman ke luar kota</li>
+          </ul>
+          <p class="panel__catatan">Dilayani {site.dealerName}, {site.grup}.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="actions">
+    <div class="wrap">
+      <a class="action" href={waLink(pesanPenawaran(car.namaPendek))} target="_blank" rel="noopener">
+        <h2 class="action__title">Minta Penawaran</h2>
+        <p class="action__sub">Harga, alokasi unit, dan skema pembayaran untuk {car.nama}.</p>
+      </a>
+      <a class="action" href="/tentang">
+        <h2 class="action__title">Kunjungi Showroom</h2>
+        <p class="action__sub">Lokasi, jam buka, dan layanan {site.dealerName}.</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,125 @@
+---
+/* =============================================================================
+   omoda-dealer · TENTANG & KONTAK
+   Versi dealer: profil showroom, empat pilar merek, rincian layanan penjualan
+   dan purna jual, area layanan, lalu lokasi dan jam operasional.
+   ============================================================================ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DealerSection from '../components/DealerSection.astro';
+import { site } from '../lib/site';
+import { getAllCars } from '../lib/cars';
+import { waLink, pesanPenawaran, pesanTestDrive } from '../lib/whatsapp';
+
+const a = site.address;
+const utama = getAllCars()[0];
+
+const pilar = [
+  { nama: 'Future', teks: 'Rancangan yang menatap ke depan, bukan mendaur ulang bentuk lama. Setiap garis punya alasan.' },
+  { nama: 'Fashion', teks: 'Mobil sebagai pernyataan gaya. Cyber Mecha Design lahir dari cara pandang itu.' },
+  { nama: 'Green', teks: 'Penggerak listrik penuh, tanpa emisi buang, dgn jangkauan yang cukup untuk harian maupun luar kota.' },
+  { nama: 'Technology', teks: 'AI Smart Cockpit dan paket ADAS yang bekerja diam-diam menjaga perjalanan.' },
+];
+
+const skema = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoDealer',
+  '@id': new URL('/tentang#dealer', Astro.site).href,
+  name: site.dealerName,
+  description: site.seo.deskripsiTentang,
+  url: new URL('/tentang', Astro.site).href,
+  telephone: '+' + site.whatsapp,
+  image: new URL('/og-omoda-04.jpg', Astro.site).href,
+  parentOrganization: { '@type': 'Organization', name: site.grup },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: a.street, addressLocality: a.locality,
+    addressRegion: a.region, postalCode: a.postalCode, addressCountry: a.country,
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: -6.9618455, longitude: 110.3890365 },
+  openingHoursSpecification: site.openingHours.map((j) => ({
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    opens: j.buka, closes: j.tutup,
+  })),
+  areaServed: [
+    ...site.areaLayanan.map((k) => ({ '@type': 'City', name: k.kota })),
+    { '@type': 'AdministrativeArea', name: 'Jawa Tengah' },
+  ],
+  brand: { '@type': 'Brand', name: 'OMODA' },
+  sameAs: Object.values(site.social).filter(Boolean),
+};
+---
+
+<BaseLayout judul="Tentang &amp; Kontak" deskripsi={site.seo.deskripsiTentang} skema={skema}>
+  <section class="judul">
+    <div class="wrap">
+      <p class="eyebrow">Tentang Kami</p>
+      <h1 class="judul__teks">Dealer Resmi OMODA<br />di {a.locality}</h1>
+      <p class="judul__lead">
+        Bagian dari {site.grup}. Satu tempat untuk mengenal produk, mencoba unitnya,
+        mengurus pembelian, sampai merawatnya bertahun-tahun kemudian.
+      </p>
+    </div>
+  </section>
+
+  <section class="isi-sec">
+    <div class="wrap">
+      <p class="eyebrow">Layanan</p>
+      <h2 class="sec-title">Yang Kami Kerjakan</h2>
+      <div class="layanan">
+        {site.layanan.map((l) => (
+          <article class="layanan__item">
+            <h3>{l.judul}</h3>
+            <p>{l.teks}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <img class="story__img" src="/hero-banner-desktop.webp" alt="OMODA 04 EV di ruang pamer."
+         width="1512" height="851" loading="lazy" decoding="async" />
+    <div class="story__body">
+      <p class="eyebrow">Tentang OMODA</p>
+      <h2 class="story__title">Empat Pilar</h2>
+      <div class="pilar">
+        {pilar.map((p) => (
+          <article class="pilar__item"><h3>{p.nama}</h3><p>{p.teks}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="isi-sec isi-sec--alt">
+    <div class="wrap">
+      <p class="eyebrow">Jangkauan</p>
+      <h2 class="sec-title">Area Layanan</h2>
+      <p class="sec-lede">
+        Showroom kami di {a.locality} melayani pembelian dari seluruh {a.region}. Untuk
+        pemesan luar kota, konsultasi dan pengurusan dokumen dapat dilakukan jarak jauh,
+        dan unit dikirim sampai alamat.
+      </p>
+      <div class="area">
+        {site.areaLayanan.map((k) => (
+          <article class="area__item"><h3>{k.kota}</h3><p>{k.catatan}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <DealerSection />
+
+  <section class="actions">
+    <div class="wrap">
+      <a class="action" href={waLink(pesanPenawaran())} target="_blank" rel="noopener">
+        <h2 class="action__title">Konsultasi</h2>
+        <p class="action__sub">Tanya produk, harga, dan skema pembayaran.</p>
+      </a>
+      <a class="action" href={waLink(pesanTestDrive(utama.namaPendek))} target="_blank" rel="noopener">
+        <h2 class="action__title">Jadwalkan Test Drive</h2>
+        <p class="action__sub">Unit disiapkan lebih dulu sesuai janji temu.</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

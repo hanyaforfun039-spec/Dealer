@@ -1,0 +1,30 @@
+---
+import { site } from '../lib/site';
+import { getAllCars, teksHarga, punyaHarga } from '../lib/cars';
+import { waLink, pesanPreOrder } from '../lib/whatsapp';
+const car = getAllCars()[0];
+---
+<section class="hero">
+  <div class="hero__media">
+    <picture>
+      <source media="(min-width:768px)" srcset={car.gambar.heroDesktop} width="1512" height="851" />
+      <img class="hero__img" src={car.gambar.heroMobile}
+           alt="OMODA 04 EV di panggung peluncuran, tampak tiga perempat depan."
+           width="1200" height="1600" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="hero__copy">
+      <p class="hero__kicker">First AI Car for Everyone</p>
+      <h1 class="hero__title">OMODA 04</h1>
+      <p class="hero__tag">Cyber Mecha Design bertemu AI Smart Cockpit. Kini dibuka pre-order resmi untuk wilayah {site.address.locality}.</p>
+      <div class="hero__price">
+        {punyaHarga(car) && <p class="from">Mulai dari | *OTR {site.address.locality}</p>}
+        <p class="amount">{punyaHarga(car) ? teksHarga(car) : 'Harga segera diumumkan'}</p>
+        <p class="note">*Harga resmi diumumkan saat peluncuran. Konfirmasi info terkini via WhatsApp.</p>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href={waLink(pesanPreOrder(car.namaPendek))} target="_blank" rel="noopener">Pre-Order Sekarang</a>
+        <a class="btn btn--ghost-light" href="#reward">Lihat Reward Pre-Order</a>
+      </div>
+    </div>
+  </div>
+</section>
