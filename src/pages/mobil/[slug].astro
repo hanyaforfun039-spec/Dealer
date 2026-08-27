@@ -6,7 +6,7 @@
    Panel harga di kanan tetap menempel saat digulir.
    ============================================================================ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllCars, labelStatus, teksHarga, punyaHarga } from '../../lib/cars';
+import { getAllCars, labelStatus, teksHarga, punyaHarga, merek, sedangPreOrder } from '../../lib/cars';
 import { site } from '../../lib/site';
 import { waLink, pesanPreOrder, pesanTestDrive, pesanPenawaran } from '../../lib/whatsapp';
 import type { Car } from '../../lib/types';
@@ -26,17 +26,29 @@ const skema = {
   '@type': 'Product',
   name: car.nama,
   description: car.tagline,
-  brand: { '@type': 'Brand', name: 'OMODA' },
+  brand: { '@type': 'Brand', name: merek(car) },
   image: galeri.map((g) => new URL(g.src, Astro.site).href),
   ...(car.warna && { color: car.warna.map((w) => w.nama) }),
   ...(punyaHarga(car) && {
     offers: {
       '@type': 'Offer', priceCurrency: 'IDR', price: car.hargaOtr,
-      availability: 'https://schema.org/PreOrder',
+      availability: sedangPreOrder(car)
+        ? 'https://schema.org/PreOrder'
+        : 'https://schema.org/InStock',
       seller: { '@id': new URL('/#organisasi', Astro.site).href },
     },
   }),
 };
+
+const faqSkema = car.faq && car.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: car.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.tanya,
+    acceptedAnswer: { '@type': 'Answer', text: f.jawab },
+  })),
+} : null;
 
 const remah = {
   '@context': 'https://schema.org',
@@ -48,10 +60,10 @@ const remah = {
 };
 ---
 
-<BaseLayout judul={car.nama} deskripsi={deskripsi} skema={[skema, remah]}>
+<BaseLayout judul={car.nama} deskripsi={deskripsi} skema={faqSkema ? [skema, remah, faqSkema] : [skema, remah]}>
   <section class="judul">
     <div class="wrap">
-      <p class="eyebrow">{labelStatus(car)} &middot; {car.kategori}</p>
+      <p class="eyebrow">{merek(car)} &middot; {labelStatus(car)} &middot; {car.kategori}</p>
       <h1 class="judul__teks">{car.nama}</h1>
       <p class="judul__lead">{car.tagline}</p>
     </div>
@@ -64,14 +76,14 @@ const remah = {
         <div class="galeri" data-galeri>
           <div class="galeri__utama">
             <img data-galeri-utama src={galeri[0].src} alt={galeri[0].alt}
-                 width="1842" height="1038" fetchpriority="high" decoding="async" />
+                 fetchpriority="high" decoding="async" />
           </div>
           {galeri.length > 1 && (
             <div class="galeri__pilih" role="group" aria-label="Pilih foto">
               {galeri.map((g, i) => (
                 <button type="button" data-galeri-pilih data-src={g.src} data-alt={g.alt}
                         aria-current={i === 0 ? 'true' : 'false'}>
-                  <img src={g.src} alt="" width="200" height="113" loading="lazy" decoding="async" />
+                  <img src={g.src} alt="" loading="lazy" decoding="async" />
                   <span>{g.judul}</span>
                 </button>
               ))}
@@ -139,8 +151,10 @@ const remah = {
           <p class:list={['panel__harga', !punyaHarga(car) && 'panel__harga--menunggu']}>{teksHarga(car)}</p>
 
           <div class="btn-row--tegak">
-            <a class="btn btn--dark" href={waLink(pesanPreOrder(car.namaPendek))} target="_blank" rel="noopener">
-              Pre-Order {car.namaPendek}
+            <a class="btn btn--dark"
+               href={waLink(sedangPreOrder(car) ? pesanPreOrder(car.namaPendek) : pesanPenawaran(car.namaPendek))}
+               target="_blank" rel="noopener">
+              {sedangPreOrder(car) ? `Pre-Order ${car.namaPendek}` : 'Minta Penawaran'}
             </a>
             <a class="btn btn--ghost" href={waLink(pesanTestDrive(car.namaPendek))} target="_blank" rel="noopener">
               Test Drive

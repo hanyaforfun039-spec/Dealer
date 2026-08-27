@@ -116,6 +116,30 @@
       {
         "tanya": "Apakah harga OTR Semarang sudah keluar?",
         "jawab": "Belum. Harga resmi diumumkan menjelang peluncuran. Hubungi kami lewat WhatsApp untuk mendapat kabar pertama begitu harganya keluar."
+      },
+      {
+        "tanya": "Apakah OMODA 04 EV bisa parkir sendiri?",
+        "jawab": "Mobil ini dibekali kamera 540 derajat dan paket 18 fitur ADAS yang sangat membantu saat parkir sempit maupun paralel. Namun perlu kami tegaskan: fitur parkir otomatis penuh yang bisa mencari tempat parkir sendiri (SIVP) ada pada JAECOO J7 SHS-P, bukan pada OMODA 04 EV. Kalau fitur itu yang Anda cari, kami arahkan ke model yang tepat, bukan menjanjikan yang tidak ada."
+      },
+      {
+        "tanya": "Aman lewat polisi tidur tinggi dan jalan rusak?",
+        "jawab": "Jarak terendah ke tanah 190 mm, lebih tinggi dari kebanyakan sedan dan cukup untuk polisi tidur maupun jalan berlubang. Untuk banjir, kami tidak menyarankan menerobos genangan pada kendaraan listrik mana pun, termasuk yang ini."
+      },
+      {
+        "tanya": "Berapa lama mengisi dayanya sampai penuh?",
+        "jawab": "Dengan pengisian cepat DC hingga 119 kW, dari 20 ke 80 persen memakan waktu sekitar 22 menit. Untuk pengisian di rumah menggunakan arus AC, angka resminya belum diumumkan pabrikan, jadi kami belum bisa menyebut durasi pastinya. Begitu keluar, kami sampaikan apa adanya."
+      },
+      {
+        "tanya": "Bagasinya muat berapa banyak?",
+        "jawab": "Hingga 1.126 liter bila kursi belakang dilipat, ditambah 38 titik penyimpanan di dalam kabin. Cukup untuk koper besar maupun stroller. Silakan datang dan coba masukkan barang Anda sendiri sebelum memutuskan."
+      },
+      {
+        "tanya": "Bagaimana kalau baterai habis di tengah jalan?",
+        "jawab": "Jangkauannya 553 km NEDC, dan angka nyata di jalan biasanya lebih rendah tergantung gaya berkendara, beban, serta pemakaian AC. Kami sarankan mengisi ketika tersisa sekitar 20 persen. Kami akan bantu memetakan lokasi pengisian di rute yang sering Anda lalui sebelum Anda membeli."
+      },
+      {
+        "tanya": "Berapa lama garansi baterainya?",
+        "jawab": "Ketentuan resmi garansi baterai untuk pasar Indonesia belum diumumkan saat halaman ini ditulis. Kami memilih tidak menebak angka. Hubungi kami dan akan kami sampaikan ketentuan resminya begitu tersedia."
       }
     ],
     "angka": [
@@ -156,6 +180,852 @@
       {
         "nama": "Obsidian Black",
         "kode": "#15181c"
+      }
+    ]
+  },
+  {
+    "slug": "j5",
+    "nama": "JAECOO J5 EV",
+    "namaPendek": "J5 EV",
+    "kategori": "SUV Listrik",
+    "powertrain": "ev",
+    "status": "tersedia",
+    "tagline": "SUV listrik premium: senyap, bertenaga, dan paling hemat biaya energi untuk keseharian di Semarang.",
+    "hargaOtr": 334500000,
+    "gambar": {
+      "thumbnail": "/jaecoo-j5-banner.webp",
+      "heroDesktop": "/jaecoo-j5-banner.webp",
+      "heroMobile": "/jaecoo-j5-banner.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j5-banner.webp",
+          "alt": "JAECOO J5 EV tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j5-black.webp",
+          "alt": "JAECOO J5 EV warna Hitam.",
+          "judul": "Hitam"
+        },
+        {
+          "src": "/jaecoo-j5-white.webp",
+          "alt": "JAECOO J5 EV warna Putih.",
+          "judul": "Putih"
+        },
+        {
+          "src": "/jaecoo-j5-grey.webp",
+          "alt": "JAECOO J5 EV warna Abu.",
+          "judul": "Abu"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Hitam",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Putih",
+        "kode": "#eceff2"
+      },
+      {
+        "nama": "Abu",
+        "kode": "#5b6068"
+      },
+      {
+        "nama": "Hijau",
+        "kode": "#2c4a3c"
+      }
+    ],
+    "highlight": [
+      "Motor listrik PMSM, torsi instan 288 Nm",
+      "Layar utama 13,2 inci FHD + panel instrumen digital 8 inci",
+      "Atap kaca panoramik seluas 1,45 m²",
+      "Kursi depan berventilasi, power tailgate, dan ambient light",
+      "Wireless charger Qi"
+    ],
+    "angka": [
+      {
+        "nilai": "155",
+        "satuan": "kW",
+        "label": "Tenaga"
+      },
+      {
+        "nilai": "288",
+        "satuan": "Nm",
+        "label": "Torsi"
+      },
+      {
+        "nilai": "461",
+        "satuan": "km",
+        "label": "Jarak Tempuh"
+      },
+      {
+        "nilai": "60,9",
+        "satuan": "kWh",
+        "label": "Baterai"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Motor & Performa",
+        "items": [
+          {
+            "label": "Tipe Motor",
+            "value": "Permanent Magnet Synchronous Motor"
+          },
+          {
+            "label": "Tenaga Maksimum",
+            "value": "155 kW"
+          },
+          {
+            "label": "Torsi",
+            "value": "288 Nm"
+          },
+          {
+            "label": "0–100 km/jam",
+            "value": "7,3 detik"
+          },
+          {
+            "label": "Kecepatan Maksimum",
+            "value": "160 km/jam"
+          }
+        ]
+      },
+      {
+        "kategori": "Baterai & Jarak Tempuh",
+        "items": [
+          {
+            "label": "Kapasitas Baterai",
+            "value": "60,9 kWh (LFP)"
+          },
+          {
+            "label": "Jarak Tempuh (NEDC)",
+            "value": "401 km"
+          },
+          {
+            "label": "Jarak Tempuh (WLTP)",
+            "value": "350 km"
+          },
+          {
+            "label": "Pengisian Cepat (DC)",
+            "value": "± 0,5 jam"
+          },
+          {
+            "label": "Pengisian Normal (AC)",
+            "value": "± 8 jam"
+          }
+        ]
+      },
+      {
+        "kategori": "Penggerak",
+        "items": [
+          {
+            "label": "Penggerak",
+            "value": "FWD"
+          },
+          {
+            "label": "Transmisi",
+            "value": "Single-Speed Otomatis"
+          },
+          {
+            "label": "Mode Berkendara",
+            "value": "3 Mode"
+          }
+        ]
+      },
+      {
+        "kategori": "Dimensi",
+        "items": [
+          {
+            "label": "P × L × T",
+            "value": "4.358 × 1.830 × 1.650 mm"
+          },
+          {
+            "label": "Wheelbase",
+            "value": "2.630 mm"
+          },
+          {
+            "label": "Ground Clearance",
+            "value": "180 mm"
+          },
+          {
+            "label": "Wading Depth",
+            "value": "450 mm"
+          }
+        ]
+      },
+      {
+        "kategori": "Kapasitas",
+        "items": [
+          {
+            "label": "Tempat Duduk",
+            "value": "5 orang"
+          },
+          {
+            "label": "Volume Bagasi",
+            "value": "420 L"
+          }
+        ]
+      },
+      {
+        "kategori": "Keselamatan & Teknologi",
+        "items": [
+          {
+            "label": "Airbag",
+            "value": "6 Airbag"
+          },
+          {
+            "label": "Rating C-NCAP",
+            "value": "5 Bintang"
+          },
+          {
+            "label": "ADAS",
+            "value": "17 Fitur"
+          },
+          {
+            "label": "Layar Infotainment",
+            "value": "10,25 inci"
+          },
+          {
+            "label": "Panel Instrumen Digital",
+            "value": "10,25 inci"
+          },
+          {
+            "label": "Wireless Charger",
+            "value": "50 W"
+          },
+          {
+            "label": "Lainnya",
+            "value": "Panoramic sunroof, LED headlights, AI Voice Assistant"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Berapa harga OTR JAECOO J5 EV di Semarang?",
+        "jawab": "Harga OTR Semarang Rp 320,4 juta untuk J5 EV Premium. Hubungi via WhatsApp untuk penawaran dan ketersediaan stok terbaru."
+      },
+      {
+        "tanya": "Berapa jarak tempuh J5 EV sekali pengisian penuh?",
+        "jawab": "Hingga 461 km berdasarkan pengetesan NEDC. Jarak nyata bisa berbeda tergantung gaya berkendara dan kondisi jalan."
+      },
+      {
+        "tanya": "Berapa lama waktu pengisian baterainya?",
+        "jawab": "Dengan DC fast charging, pengisian dari 30% ke 80% memerlukan waktu sekitar 27 menit."
+      },
+      {
+        "tanya": "Berapa lama mengisi daya JAECOO J5 EV?",
+        "jawab": "Pengisian cepat DC sekitar 30 menit, dan pengisian normal AC di rumah sekitar 8 jam dari kondisi rendah ke penuh. Baterainya 60,9 kWh berjenis LFP."
+      },
+      {
+        "tanya": "Aman untuk polisi tidur dan jalan tidak rata?",
+        "jawab": "Jarak terendah ke tanah 180 mm. Aman untuk polisi tidur dan jalan berlubang pada umumnya. Untuk genangan air, berlaku peringatan yang sama seperti kendaraan listrik lain: sebaiknya dihindari."
+      },
+      {
+        "tanya": "Bagasinya cukup untuk keluarga?",
+        "jawab": "Volume bagasi 420 liter dengan kapasitas lima orang. Cukup untuk belanja mingguan dan koper perjalanan, tetapi bila Anda rutin membawa barang besar, sebaiknya bandingkan dulu dengan J8 yang bagasinya 738 liter."
+      },
+      {
+        "tanya": "Apakah punya fitur bantu parkir?",
+        "jawab": "Tersedia paket 17 fitur ADAS. Untuk rincian mana saja yang termasuk bantuan parkir pada varian yang sedang Anda pertimbangkan, kami cek langsung ke daftar fitur varian tersebut dan sampaikan apa adanya, karena isinya berbeda antar varian."
+      },
+      {
+        "tanya": "Ada pengisian daya nirkabel untuk ponsel?",
+        "jawab": "Ada, dengan daya 50 W."
+      }
+    ]
+  },
+  {
+    "slug": "j7-shs",
+    "nama": "JAECOO J7 SHS",
+    "namaPendek": "J7 SHS",
+    "kategori": "SUV Hybrid",
+    "powertrain": "phev",
+    "status": "tersedia",
+    "tagline": "Super Hybrid System: irit harian seperti mobil listrik, tenang tanpa cemas untuk jarak jauh.",
+    "hargaOtr": 521900000,
+    "gambar": {
+      "thumbnail": "/jaecoo-j7-banner.webp",
+      "heroDesktop": "/jaecoo-j7-banner.webp",
+      "heroMobile": "/jaecoo-j7-banner.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j7-banner.webp",
+          "alt": "JAECOO J7 SHS tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j7-black.webp",
+          "alt": "JAECOO J7 SHS warna Hitam.",
+          "judul": "Hitam"
+        },
+        {
+          "src": "/jaecoo-j7-white.webp",
+          "alt": "JAECOO J7 SHS warna Putih.",
+          "judul": "Putih"
+        },
+        {
+          "src": "/jaecoo-j7-silver.webp",
+          "alt": "JAECOO J7 SHS warna Silver.",
+          "judul": "Silver"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Hitam",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Putih",
+        "kode": "#eceff2"
+      },
+      {
+        "nama": "Silver",
+        "kode": "#b9bec4"
+      },
+      {
+        "nama": "Stone Grey",
+        "kode": "#6b6f73"
+      }
+    ],
+    "highlight": [
+      "Efisiensi termal mesin 44,5% (kelas terdepan)",
+      "Mode EV & HEV; bisa berjalan penuh listrik untuk harian",
+      "Pengisian AC (Type 2) & DC fast (CCS2, 30-80% +/- 20 menit)",
+      "Baterai LiFePO4 18,3 kWh dengan proteksi IP68",
+      "19 fitur ADAS (Adaptive Cruise Control, Lane Departure Prevention, Blind Spot Detection)"
+    ],
+    "angka": [
+      {
+        "nilai": "1.5",
+        "satuan": "TGDI",
+        "label": "Powertrain"
+      },
+      {
+        "nilai": "Mesin 140 hp + motor 201 hp / 310 Nm",
+        "satuan": "",
+        "label": "Tenaga"
+      },
+      {
+        "nilai": "18,3",
+        "satuan": "kWh",
+        "label": "Baterai"
+      },
+      {
+        "nilai": "+/- 1.200-1.300 km",
+        "satuan": "",
+        "label": "Jangkauan Total"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Powertrain",
+        "items": [
+          {
+            "label": "Tipe",
+            "value": "1.5T + 1DHT (Dedicated Hybrid Transmission)"
+          },
+          {
+            "label": "Efisiensi Termal",
+            "value": "44,5%"
+          },
+          {
+            "label": "Tenaga Motor Listrik",
+            "value": "201 hp"
+          },
+          {
+            "label": "Tenaga Mesin",
+            "value": "140 hp"
+          },
+          {
+            "label": "Torsi Motor",
+            "value": "310 Nm"
+          },
+          {
+            "label": "Torsi Mesin",
+            "value": "215 Nm"
+          }
+        ]
+      },
+      {
+        "kategori": "Performa",
+        "items": [
+          {
+            "label": "0–100 km/jam",
+            "value": "7,3 detik"
+          },
+          {
+            "label": "Kecepatan Maksimum",
+            "value": "180 km/jam"
+          }
+        ]
+      },
+      {
+        "kategori": "Baterai & Jarak Tempuh",
+        "items": [
+          {
+            "label": "Kapasitas Baterai",
+            "value": "18,3 kWh"
+          },
+          {
+            "label": "Mode EV Murni",
+            "value": "± 100 km"
+          },
+          {
+            "label": "Jangkauan Total",
+            "value": "± 1.300 km"
+          }
+        ]
+      },
+      {
+        "kategori": "Dimensi",
+        "items": [
+          {
+            "label": "Wheelbase",
+            "value": "2.672 mm"
+          },
+          {
+            "label": "Ground Clearance",
+            "value": "200 mm"
+          }
+        ]
+      },
+      {
+        "kategori": "Keselamatan & Teknologi",
+        "items": [
+          {
+            "label": "Airbag",
+            "value": "8 Airbag"
+          },
+          {
+            "label": "ADAS",
+            "value": "19 Fitur"
+          },
+          {
+            "label": "Center Display",
+            "value": "14,8 inci"
+          },
+          {
+            "label": "Wireless Charger",
+            "value": "50 W"
+          },
+          {
+            "label": "Audio",
+            "value": "Sony Premium 8 Speaker"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Apa itu SHS pada JAECOO J7 SHS?",
+        "jawab": "SHS (Super Hybrid System) adalah sistem plug-in hybrid: mesin bensin 1.5TGDI berpadu motor listrik sehingga bisa berjalan penuh listrik untuk pemakaian harian, dengan efisiensi termal mesin mencapai 44,5%."
+      },
+      {
+        "tanya": "Berapa jarak tempuh JAECOO J7 SHS?",
+        "jawab": "Mode listrik murni menempuh sekitar 90-100 km. Gabungan bensin dan baterai penuh memberi jangkauan hingga sekitar 1.200-1.300 km."
+      },
+      {
+        "tanya": "Berapa harga OTR-nya di Semarang?",
+        "jawab": "Harga OTR Semarang Rp 520,4 juta. Hubungi via WhatsApp untuk penawaran terbaik dan ketersediaan unit."
+      },
+      {
+        "tanya": "J7 SHS ini wajib dicas atau tidak?",
+        "jawab": "Tidak wajib. Sistem hybrid-nya tetap berjalan meski baterai tidak diisi, karena mesin bensin ikut mengisi. Tetapi bila Anda mengisi baterainya, konsumsi bahan bakar jauh lebih hemat untuk pemakaian harian jarak pendek. Kapasitas baterainya 18,3 kWh."
+      },
+      {
+        "tanya": "Apakah J7 SHS bisa parkir otomatis?",
+        "jawab": "Ini perlu dijawab tegas supaya tidak keliru: fitur parkir otomatis SIVP yang bisa mencari tempat parkir dan menjemput pengemudi ada pada varian J7 SHS-P, bukan pada J7 SHS. Bila fitur tersebut yang Anda inginkan, sampaikan kepada kami dan akan kami cek ketersediaan varian SHS-P beserta selisih harganya."
+      },
+      {
+        "tanya": "Cocok untuk jalan pedesaan atau menanjak?",
+        "jawab": "Jarak terendah ke tanah 200 mm, tertinggi di antara model yang kami jual, sehingga cukup lega untuk jalan tidak rata maupun tanjakan dengan permukaan buruk."
+      },
+      {
+        "tanya": "Ada berapa fitur keselamatannya?",
+        "jawab": "Paket ADAS berisi 19 fitur, ditambah pengisian nirkabel 50 W di kabin. Rincian fungsi per fitur bisa kami tunjukkan langsung saat test drive, bukan hanya disebutkan jumlahnya."
+      }
+    ]
+  },
+  {
+    "slug": "j8-ardis",
+    "nama": "JAECOO J8 ARDIS",
+    "namaPendek": "J8 ARDIS",
+    "kategori": "SUV",
+    "powertrain": "ice",
+    "status": "tersedia",
+    "tagline": "Flagship AWD sejati: 2.0 Turbo dengan ARDIS torque vectoring dan suspensi magnetik CDC.",
+    "hargaOtr": 717900000,
+    "gambar": {
+      "thumbnail": "/jaecoo-j8-banner.webp",
+      "heroDesktop": "/jaecoo-j8-banner.webp",
+      "heroMobile": "/jaecoo-j8-banner.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j8-banner.webp",
+          "alt": "JAECOO J8 ARDIS tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j8-black.webp",
+          "alt": "JAECOO J8 ARDIS warna Hitam.",
+          "judul": "Hitam"
+        },
+        {
+          "src": "/jaecoo-j8-white.webp",
+          "alt": "JAECOO J8 ARDIS warna Putih.",
+          "judul": "Putih"
+        },
+        {
+          "src": "/jaecoo-j8-silver.webp",
+          "alt": "JAECOO J8 ARDIS warna Silver.",
+          "judul": "Silver"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Hitam",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Putih",
+        "kode": "#eceff2"
+      },
+      {
+        "nama": "Silver",
+        "kode": "#b9bec4"
+      },
+      {
+        "nama": "Hijau",
+        "kode": "#2c4a3c"
+      }
+    ],
+    "highlight": [
+      "ARDIS AWD dengan dynamic torque vectoring hingga 1.800 Nm ke satu roda",
+      "Suspensi magnetik CDC dengan penyesuaian kondisi jalan real-time",
+      "7 mode berkendara via Crystal Drive Mode Selector (Eco, Normal, Sport, Snow, Sand, Mud, Offroad)",
+      "540° Around View Monitor dengan Transparent Bonnet Mode",
+      "19 fitur ADAS"
+    ],
+    "angka": [
+      {
+        "nilai": "2.0",
+        "satuan": "TGDI",
+        "label": "Mesin"
+      },
+      {
+        "nilai": "248",
+        "satuan": "ps",
+        "label": "Tenaga"
+      },
+      {
+        "nilai": "385",
+        "satuan": "Nm",
+        "label": "Torsi"
+      },
+      {
+        "nilai": "AWD ARDIS",
+        "satuan": "",
+        "label": "Penggerak"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Mesin",
+        "items": [
+          {
+            "label": "Tipe Mesin",
+            "value": "2.0L Turbo, 4 Silinder 16 Katup DOHC"
+          },
+          {
+            "label": "Tenaga Maksimum",
+            "value": "245 hp"
+          },
+          {
+            "label": "Torsi Maksimum",
+            "value": "385 Nm"
+          }
+        ]
+      },
+      {
+        "kategori": "Transmisi & Penggerak",
+        "items": [
+          {
+            "label": "Transmisi",
+            "value": "8-Speed Otomatis"
+          },
+          {
+            "label": "Penggerak",
+            "value": "ARDIS Terrain Response AWD"
+          }
+        ]
+      },
+      {
+        "kategori": "Dimensi",
+        "items": [
+          {
+            "label": "P × L × T",
+            "value": "4.820 × 1.930 × 1.710 mm"
+          },
+          {
+            "label": "Wheelbase",
+            "value": "2.820 mm"
+          }
+        ]
+      },
+      {
+        "kategori": "Kapasitas & Roda",
+        "items": [
+          {
+            "label": "Volume Bagasi",
+            "value": "738 L"
+          },
+          {
+            "label": "Tempat Duduk",
+            "value": "5 orang"
+          },
+          {
+            "label": "Ban & Velg",
+            "value": "255/45 R21"
+          }
+        ]
+      },
+      {
+        "kategori": "Keselamatan",
+        "items": [
+          {
+            "label": "ADAS",
+            "value": "19 Fitur"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Berapa harga OTR JAECOO J8 ARDIS di Semarang?",
+        "jawab": "Harga OTR Semarang Rp 710,4 juta. Untuk penawaran khusus dan ketersediaan warna, hubungi via WhatsApp."
+      },
+      {
+        "tanya": "Apa itu sistem ARDIS pada J8?",
+        "jawab": "ARDIS (All-Road Drive Intelligent System) adalah penggerak AWD cerdas yang dapat menyalurkan torsi hingga 1.800 Nm ke satu roda (dynamic torque vectoring) untuk traksi optimal di berbagai medan."
+      },
+      {
+        "tanya": "Apakah tersedia paket kredit untuk flagship ini?",
+        "jawab": "Tersedia. Simulasikan cicilan sesuai DP dan tenor pilihan Anda, lalu kirim ke WhatsApp untuk proses lebih lanjut."
+      },
+      {
+        "tanya": "J8 ARDIS ini isinya berapa kursi?",
+        "jawab": "Lima kursi, bukan tujuh. Kami sebutkan di depan supaya tidak salah harapan, karena ukurannya yang besar sering membuat orang mengira ini SUV tujuh penumpang."
+      },
+      {
+        "tanya": "Seberapa besar bagasinya?",
+        "jawab": "738 liter, terbesar di antara model yang kami jual. Cocok bila Anda rutin membawa barang banyak atau sering bepergian jauh sekeluarga."
+      },
+      {
+        "tanya": "Ini mobil bensin biasa atau hybrid?",
+        "jawab": "J8 ARDIS memakai mesin bensin konvensional, tanpa baterai yang perlu diisi. Bila Anda menginginkan versi hybrid dengan konsumsi lebih hemat, tersedia J8 SHS ARDIS."
+      },
+      {
+        "tanya": "Fitur keselamatannya bagaimana?",
+        "jawab": "Paket ADAS berisi 19 fitur. Kami dengan senang hati menjelaskan cara kerja tiap fitur dan mendemonstrasikannya saat test drive."
+      }
+    ]
+  },
+  {
+    "slug": "j8-shs-ardis",
+    "nama": "JAECOO J8 SHS ARDIS",
+    "namaPendek": "J8 SHS",
+    "kategori": "SUV Hybrid",
+    "powertrain": "phev",
+    "status": "tersedia",
+    "tagline": "Puncak lineup: plug-in hybrid AWD bertenaga +/- 530 hp, 0-100 km/jam 5,4 detik, jangkauan 1.400 km.",
+    "hargaOtr": 847900000,
+    "gambar": {
+      "thumbnail": "/jaecoo-j8-banner-2.webp",
+      "heroDesktop": "/jaecoo-j8-banner-2.webp",
+      "heroMobile": "/jaecoo-j8-banner-2.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j8-banner-2.webp",
+          "alt": "JAECOO J8 SHS ARDIS tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j8-black.webp",
+          "alt": "JAECOO J8 SHS ARDIS warna Hitam.",
+          "judul": "Hitam"
+        },
+        {
+          "src": "/jaecoo-j8-white.webp",
+          "alt": "JAECOO J8 SHS ARDIS warna Putih.",
+          "judul": "Putih"
+        },
+        {
+          "src": "/jaecoo-j8-silver.webp",
+          "alt": "JAECOO J8 SHS ARDIS warna Silver.",
+          "judul": "Silver"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Hitam",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Putih",
+        "kode": "#eceff2"
+      },
+      {
+        "nama": "Silver",
+        "kode": "#b9bec4"
+      },
+      {
+        "nama": "Hijau",
+        "kode": "#2c4a3c"
+      }
+    ],
+    "highlight": [
+      "Akselerasi 0-100 km/jam dalam 5,4 detik",
+      "Pure EV hingga 180 km; jangkauan total hingga +/- 1.400 km",
+      "ARDIS Intelligent AWD + suspensi magnetik CDC",
+      "Headrest speaker terintegrasi dengan 14-speaker Sony Sound System",
+      "Baterai 34,46 kWh dengan proteksi IP68 dan quadruple-layer safety"
+    ],
+    "angka": [
+      {
+        "nilai": "1.5",
+        "satuan": "TGDI",
+        "label": "Powertrain"
+      },
+      {
+        "nilai": "395",
+        "satuan": "kW",
+        "label": "Tenaga Gabungan"
+      },
+      {
+        "nilai": "34,46",
+        "satuan": "kWh",
+        "label": "Baterai"
+      },
+      {
+        "nilai": "+/- 1.400 km",
+        "satuan": "",
+        "label": "Jangkauan Total"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Powertrain",
+        "items": [
+          {
+            "label": "Tipe",
+            "value": "1.5TGDI Plug-in Hybrid"
+          },
+          {
+            "label": "Tenaga Sistem Gabungan",
+            "value": "530 hp"
+          },
+          {
+            "label": "Torsi Sistem Gabungan",
+            "value": "650 Nm"
+          }
+        ]
+      },
+      {
+        "kategori": "Performa",
+        "items": [
+          {
+            "label": "0–100 km/jam",
+            "value": "5,4 detik"
+          }
+        ]
+      },
+      {
+        "kategori": "Baterai & Jarak Tempuh",
+        "items": [
+          {
+            "label": "Kapasitas Baterai",
+            "value": "34,46 kWh"
+          },
+          {
+            "label": "Mode EV Murni",
+            "value": "± 180 km"
+          },
+          {
+            "label": "Jangkauan Total",
+            "value": "± 1.400 km"
+          }
+        ]
+      },
+      {
+        "kategori": "Penggerak & Sasis",
+        "items": [
+          {
+            "label": "Penggerak",
+            "value": "ARDIS All-Wheel Drive"
+          },
+          {
+            "label": "Suspensi",
+            "value": "CDC Magnetic Suspension"
+          }
+        ]
+      },
+      {
+        "kategori": "Dimensi",
+        "items": [
+          {
+            "label": "P × L × T",
+            "value": "4.820 × 1.930 × 1.710 mm"
+          },
+          {
+            "label": "Wheelbase",
+            "value": "2.820 mm"
+          }
+        ]
+      },
+      {
+        "kategori": "Keselamatan",
+        "items": [
+          {
+            "label": "Airbag",
+            "value": "10 Airbag"
+          },
+          {
+            "label": "ADAS",
+            "value": "19 Fitur"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Apa keunggulan J8 SHS ARDIS dibanding J8 ARDIS biasa?",
+        "jawab": "J8 SHS ARDIS menambahkan powertrain plug-in hybrid AWD: tenaga gabungan +/- 530 hp, akselerasi 0-100 km/jam 5,4 detik, jauh lebih irit, dan dapat berjalan penuh listrik hingga 180 km."
+      },
+      {
+        "tanya": "Berapa harga OTR-nya di Semarang?",
+        "jawab": "Harga OTR Semarang Rp 838,5 juta. Hubungi via WhatsApp untuk penawaran terbaik dan ketersediaan unit."
+      },
+      {
+        "tanya": "Apakah bisa test drive flagship ini?",
+        "jawab": "Bisa, sesuai ketersediaan unit. Isi formulir test drive dan kami akan mengatur jadwalnya di Semarang dan sekitarnya."
+      },
+      {
+        "tanya": "Apa bedanya dengan J8 ARDIS biasa?",
+        "jawab": "Versi SHS ARDIS memakai sistem hybrid dengan baterai 34,46 kWh, jauh lebih besar dari hybrid pada umumnya, sehingga bisa menempuh jarak harian dengan tenaga listrik saja. J8 ARDIS biasa memakai mesin bensin konvensional dan harganya lebih terjangkau."
+      },
+      {
+        "tanya": "Wajib punya pengisian daya di rumah?",
+        "jawab": "Tidak wajib, karena mesin bensinnya tetap bekerja. Tetapi dengan baterai sebesar 34,46 kWh, keunggulan utamanya baru benar-benar terasa bila Anda bisa mengisi daya di rumah. Kami sampaikan ini terus terang supaya perhitungan biaya Anda realistis."
+      },
+      {
+        "tanya": "Berapa jumlah fitur keselamatannya?",
+        "jawab": "Paket ADAS berisi 19 fitur, sama dengan J8 ARDIS."
       }
     ]
   }

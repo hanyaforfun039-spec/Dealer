@@ -61,7 +61,7 @@ ul{list-style:none}
   transition:background .3s ease;
 }
 .header.is-solid{background:var(--ink)}
-.logo img{display:block;height:16px;width:auto}
+.logo img{display:block;width:auto;height:auto;max-height:16px;max-width:100%}
 .burger{width:40px;height:40px;display:grid;place-content:center;gap:6px}
 .burger span{display:block;width:24px;height:2px;background:var(--paper);transition:transform .3s ease,opacity .2s ease}
 .nav-open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
@@ -74,7 +74,7 @@ ul{list-style:none}
 .nav{
   position:fixed;inset:0;z-index:55;
   background:var(--ink);color:var(--paper);
-  padding:calc(var(--header-h) + 32px) var(--pad) 48px;
+  padding:calc(var(--header-h) + 20px) var(--pad) 40px;
   overflow-y:auto;
   opacity:0;visibility:hidden;transform:translateY(-10px);
   transition:opacity .28s ease,transform .28s ease,visibility .28s;
@@ -289,7 +289,7 @@ ul{list-style:none}
    ============================================================ */
 .footer{background:var(--ink);color:var(--silver);padding:48px var(--pad) calc(100px + env(safe-area-inset-bottom))}
 .footer__inner{max-width:var(--max);margin:0 auto;text-align:center}
-.footer__mark img{display:block;height:18px;width:auto;margin:0 auto 18px}
+.footer__mark img{display:block;width:auto;height:auto;max-height:18px;max-width:100%;margin:0 auto 18px}
 .footer__addr{font-size:13.5px;line-height:1.8}
 .footer__social{display:flex;justify-content:center;gap:12px;margin:22px 0 6px}
 .footer__social a{
@@ -458,3 +458,46 @@ ul{list-style:none}
 
 .car__status{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
 .car__price--menunggu{font-size:clamp(16px,3.6vw,19px);color:#5e5e5e;font-family:var(--body);font-weight:400;line-height:1.5}
+
+/* Foto model berasal dari sumber dgn rasio berbeda-beda (OMODA 1,78 :
+   JAECOO 1,50-1,93). Kotaknya dipatok 16:9 dan gambar memakai `contain`,
+   jadi tidak ada bagian mobil yang terpotong dan tinggi halaman tidak
+   melompat saat foto berganti di galeri. */
+.galeri__utama{aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden}
+.galeri__utama img{width:100%;height:100%;object-fit:contain}
+.galeri__pilih button{aspect-ratio:auto}
+.galeri__pilih img{aspect-ratio:16/9;object-fit:contain;background:var(--bone)}
+
+/* Logo wordmark berasio 18:1. Mengunci `height` lalu membiarkan
+   `img{max-width:100%}` memangkas lebarnya membuat rasionya rusak di layar
+   sempit — logo tampak gepeng. Kedua dimensi dibiarkan auto dan dibatasi
+   lewat max-height/max-width supaya rasionya selalu terjaga. */
+
+/* ============================================================
+   MENU — tata letak setelah wordmark dihilangkan
+   Isi menu ditengahkan tegak lurus dan lebarnya dibatasi, supaya
+   ruang kosong terbaca sebagai kelegaan yang disengaja, bukan sisa
+   elemen yang dicabut. Kalau isinya melebihi tinggi layar, kisi
+   otomatis kembali menggulir dari atas.
+   ============================================================ */
+.nav{
+  display:grid;
+  grid-template-rows:1fr auto;
+  align-content:center;
+  gap:34px;
+}
+.nav__list{
+  width:100%;
+  max-width:520px;
+  margin:0 auto;
+  align-self:center;
+}
+.nav__foot{
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(min-width:768px){
+  .nav__list{max-width:560px}
+  .nav__foot{max-width:560px}
+}

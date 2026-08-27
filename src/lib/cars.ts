@@ -28,3 +28,12 @@ export function teksHarga(car: Car): string {
 }
 
 export const punyaHarga = (car: Car): boolean => car.hargaOtr != null;
+
+/** Merek diturunkan dari nama model. Situs ini kini memuat dua merek dalam
+    satu grup (OMODA dan JAECOO), dan menyebut merek yang salah di data
+    terstruktur membuat Google mengaitkan produk ke merek yang keliru. */
+export const merek = (car: Car): 'OMODA' | 'JAECOO' =>
+  /jaecoo/i.test(car.nama) ? 'JAECOO' : 'OMODA';
+
+/** Mobil pre-order ditawari tombol pre-order; yang sudah tersedia tidak. */
+export const sedangPreOrder = (car: Car): boolean => car.status === 'pre-order';
