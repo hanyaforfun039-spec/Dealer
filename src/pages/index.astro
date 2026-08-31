@@ -22,13 +22,24 @@ const skema = [
     description: utama.tagline,
     brand: { '@type': 'Brand', name: 'OMODA' },
     image: new URL('/og-omoda-04.jpg', Astro.site).href,
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'IDR',
-      availability: 'https://schema.org/PreOrder',
-      url: new URL(`/mobil/${utama.slug}`, Astro.site).href,
-      seller: { '@id': new URL('/#organisasi', Astro.site).href },
-    },
+    /* Hanya kirim `offers` bila harganya benar-benar ada. Offer tanpa
+       `price` ditolak Google sebagai galat kritis dan justru membuat
+       halaman tidak muncul sebagai hasil kaya. */
+    ...(utama.hargaOtr != null && {
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'IDR',
+        price: utama.hargaOtr,
+        availability: 'https://schema.org/PreOrder',
+        url: new URL(`/mobil/${utama.slug}`, Astro.site).href,
+        seller: { '@id': new URL('/#organisasi', Astro.site).href },
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'ID',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        },
+      },
+    }),
   },
   {
     '@context': 'https://schema.org',

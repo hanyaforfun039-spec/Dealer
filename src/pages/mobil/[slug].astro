@@ -28,13 +28,20 @@ const skema = {
   description: car.tagline,
   brand: { '@type': 'Brand', name: merek(car) },
   image: galeri.map((g) => new URL(g.src, Astro.site).href),
-  ...(car.warna && { color: car.warna.map((w) => w.nama) }),
+  /* `color` sengaja TIDAK dikirim: schema.org mengharapkan satu nilai,
+     dan mengirim larik membuat Google melaporkannya sebagai kolom ganda.
+     Daftar warna tetap tampil di halaman untuk pembaca. */
   ...(punyaHarga(car) && {
     offers: {
       '@type': 'Offer', priceCurrency: 'IDR', price: car.hargaOtr,
       availability: sedangPreOrder(car)
         ? 'https://schema.org/PreOrder'
         : 'https://schema.org/InStock',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'ID',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+      },
       seller: { '@id': new URL('/#organisasi', Astro.site).href },
     },
   }),
