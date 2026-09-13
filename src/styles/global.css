@@ -94,12 +94,29 @@ ul{list-style:none}
    HERO
    ============================================================ */
 .hero{position:relative;background:var(--ink);color:var(--paper)}
-.hero__img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-@media(min-width:768px){.hero__img{aspect-ratio:16/9}}
+/* Di ponsel hero dibuat setinggi hampir satu layar. Dengan rasio 3/4 saja
+   (390px -> 520px) blok teks menutupi 88% tingginya dan mobilnya nyaris
+   tidak terlihat; min-height memberi foto ruang di atas teks. */
+.hero__img{
+  width:100%;height:auto;
+  aspect-ratio:3/4;
+  min-height:min(82svh,640px);max-height:88svh;
+  object-fit:cover;object-position:50% 40%;
+}
+/* 768-1099px adalah titik paling rawan: foto beralih ke 16:9 sehingga
+   tingginya justru menyusut (768px -> 432px) padahal teksnya masih penuh.
+   Karena itu min-height dipertahankan sampai lebar yang 16:9-nya sudah
+   cukup tinggi dengan sendirinya. */
+@media(min-width:768px){
+  .hero__img{aspect-ratio:16/9;min-height:min(76svh,580px);object-position:center}
+}
+@media(min-width:1100px){
+  .hero__img{min-height:0}
+}
 .hero__copy{
   position:absolute;inset:auto 0 0 0;
-  padding:0 var(--pad) 44px;
-  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.5) 40%,rgba(0,0,0,.86) 100%);
+  padding:0 var(--pad) 36px;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.42) 34%,rgba(0,0,0,.88) 100%);
 }
 .hero__kicker{
   font-family:var(--display);font-weight:600;font-size:13px;
@@ -114,14 +131,35 @@ ul{list-style:none}
   margin-top:10px;font-size:clamp(15px,4vw,19px);color:#d8d8d8;
   max-width:440px;
 }
-.hero__price{margin-top:26px}
+.hero__price{margin-top:18px}
 .hero__price .from{font-size:13px;color:#b8b8b8}
 .hero__price .amount{
   font-family:var(--display);font-weight:700;
   font-size:clamp(22px,6vw,30px);letter-spacing:.01em;margin-top:2px;
 }
 .hero__price .note{font-size:12px;color:#8f8f8f;margin-top:4px}
-.hero__cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.hero__cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+
+/* Ponsel: keterangan harga panjang disembunyikan (kalimat yang sama sudah
+   ada di kartu lineup), tombol melebar penuh supaya mudah dijangkau ibu
+   jari, dan tipografi dirapatkan. Semuanya demi menyisakan ruang foto. */
+@media(max-width:1099px){
+  .hero__kicker{font-size:11px;letter-spacing:.16em;margin-bottom:7px}
+  .hero__title{font-size:clamp(38px,11vw,54px)}
+  .hero__tag{
+    margin-top:8px;font-size:14px;line-height:1.45;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .hero__price{
+    margin-top:14px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
+  }
+  .hero__price .from{font-size:12px}
+  .hero__price .amount{margin-top:0;font-size:23px}
+  .hero__price .note{display:none}
+  .hero__cta{margin-top:16px;display:grid;grid-template-columns:1fr;gap:9px}
+  .hero__cta .btn{padding:14px 20px;font-size:13px}
+}
 
 /* ============================================================
    BUTTON
@@ -176,27 +214,120 @@ ul{list-style:none}
 .lineup{padding:64px 0 70px;background:var(--bone)}
 .lineup__head{text-align:center;margin-bottom:40px}
 .lineup__head .sec-lede{margin-inline:auto}
-.car{max-width:640px;margin:0 auto;text-align:center}
-.car__img{width:100%;height:auto}
-.car__name{font-family:var(--display);font-weight:700;font-size:26px;margin-top:24px}
-.car__from{margin-top:14px;font-size:14px;color:#565656}
-.car__price{
-  margin-top:4px;font-family:var(--display);font-weight:700;
-  font-size:clamp(24px,6vw,32px);
-}
+/* ---- Kisi model ------------------------------------------------------
+   Kartu sengaja ringkas: foto, merek, nama, harga, dua angka kunci, satu
+   tindakan. Spesifikasi penuh ada di halaman model. Bentuk lama menumpuk
+   daftar 5 spesifikasi + dua tombol di tiap kartu sehingga satu model
+   setinggi 800px dan beranda jadi 12 layar di ponsel.
+   Model pertama diberi kartu sorot yang melebar di layar lebar. */
 .car__note{margin-top:6px;font-size:12px;color:#7c7676}
-.car__divider{height:1px;background:var(--line);margin:28px 0}
-.specs{text-align:left;max-width:400px;margin:0 auto}
-.specs h3{font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px;color:#3a3a3a}
-.specs li{
-  position:relative;padding:9px 0 9px 20px;font-size:15px;
+
+.lineup__daftar{display:grid;gap:16px;grid-template-columns:1fr}
+
+.kartu{
+  background:var(--paper);
+  border:1px solid var(--line);
+  display:flex;flex-direction:column;
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.kartu:hover{
+  border-color:#c9c2ba;transform:translateY(-2px);
+  box-shadow:0 10px 26px rgba(10,10,10,.07);
+}
+.kartu__tautan{display:block;color:inherit}
+
+/* Foto potongan 1842x1038 di latar terang. Kotak dikunci 16:9 supaya semua
+   kartu dalam satu baris setinggi sama; object-fit:contain menjaga bemper
+   depan dan buritan tidak terpotong. */
+.kartu__media{
+  background:linear-gradient(180deg,#fff 0%,#efebe7 100%);
+  aspect-ratio:16/9;
   border-bottom:1px solid var(--line);
 }
-.specs li::before{
-  content:"";position:absolute;left:2px;top:17px;
-  width:6px;height:6px;background:var(--accent);transform:rotate(45deg);
+.kartu__media img{
+  display:block;width:100%;height:100%;
+  object-fit:contain;object-position:center;
 }
-.car__actions{margin-top:30px;display:flex;flex-direction:column;gap:12px;align-items:center}
+
+.kartu__isi{padding:16px 18px 18px}
+.kartu__chip{
+  font-family:var(--display);font-weight:600;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+}
+.kartu__chip span{color:var(--silver);margin:0 3px}
+.kartu__nama{
+  margin-top:7px;
+  font-family:var(--display);font-weight:700;
+  font-size:21px;letter-spacing:.01em;line-height:1.2;
+}
+.kartu__tagline{
+  margin-top:6px;font-size:14px;color:#5a5a5a;line-height:1.45;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.kartu__harga{
+  margin-top:12px;
+  font-family:var(--display);font-weight:700;
+  font-size:24px;letter-spacing:.01em;
+}
+.kartu__harga--menunggu{
+  font-family:var(--body);font-weight:400;
+  font-size:15px;color:#5e5e5e;line-height:1.5;
+}
+.kartu__ket{margin-top:2px;font-size:12px;color:#7c7676}
+
+/* Dua angka kunci sebagai pembanding cepat antar model. */
+.kartu__angka{
+  margin-top:14px;padding-top:13px;
+  border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.kartu__angka dt{
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;
+}
+.kartu__angka dd{
+  margin-top:3px;
+  font-family:var(--display);font-weight:700;font-size:17px;
+}
+.kartu__angka dd span{font-size:11px;font-weight:600;margin-left:2px;color:#6a6a6a}
+
+/* Kaki kartu di LUAR tautan kartu supaya tombol WhatsApp bisa diklik
+   sendiri tanpa ikut membuka halaman model. */
+.kartu__kaki{margin-top:auto;display:flex;border-top:1px solid var(--line)}
+.kartu__aksi{
+  flex:1;padding:14px 16px;
+  font-family:var(--display);font-weight:700;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
+}
+.kartu__aksi:hover{color:var(--accent)}
+.kartu__wa{
+  display:flex;align-items:center;gap:7px;
+  padding:14px 16px;border-left:1px solid var(--line);
+  font-family:var(--display);font-weight:700;font-size:13px;
+  letter-spacing:.06em;color:#0f8a3d;
+}
+.kartu__wa svg{width:15px;height:15px;fill:currentColor;flex:none}
+.kartu__wa:hover{background:#f2fbf4}
+
+@media(min-width:640px){
+  .lineup__daftar{grid-template-columns:repeat(2,1fr);gap:20px}
+  .kartu--sorot{grid-column:1/-1}
+  .kartu--sorot .kartu__nama{font-size:30px}
+  .kartu--sorot .kartu__harga{font-size:30px}
+  .kartu--sorot .kartu__tagline{font-size:16px}
+}
+@media(min-width:1100px){
+  .lineup__daftar{grid-template-columns:repeat(4,1fr);gap:22px}
+  /* Kartu sorot melebar penuh, isinya jadi dua kolom: foto kiri, teks kanan. */
+  .kartu--sorot .kartu__tautan{display:grid;grid-template-columns:1.3fr 1fr;align-items:stretch}
+  .kartu--sorot .kartu__media{
+    border-bottom:0;border-right:1px solid var(--line);
+    aspect-ratio:auto;min-height:330px;
+  }
+  .kartu--sorot .kartu__isi{align-self:center;padding:30px 34px}
+  .kartu--sorot .kartu__kaki{justify-content:flex-end}
+  .kartu--sorot .kartu__aksi{flex:none;border-left:1px solid var(--line)}
+}
 @media(min-width:560px){.car__actions{flex-direction:row;justify-content:center}}
 
 /* ============================================================
@@ -456,8 +587,6 @@ ul{list-style:none}
 .action__sub{margin-top:8px;color:#5e5e5e;font-size:14.5px}
 .action:hover .action__title{color:var(--accent)}
 
-.car__status{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.car__price--menunggu{font-size:clamp(16px,3.6vw,19px);color:#5e5e5e;font-family:var(--body);font-weight:400;line-height:1.5}
 
 /* Foto model berasal dari sumber dgn rasio berbeda-beda (OMODA 1,78 :
    JAECOO 1,50-1,93). Kotaknya dipatok 16:9 dan gambar memakai `contain`,
