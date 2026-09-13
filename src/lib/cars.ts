@@ -5,7 +5,7 @@
    dan kartunya otomatis muncul di daftar lineup. Tidak ada berkas halaman baru
    yang perlu dibuat.
    ============================================================================ */
-import type { Car } from './types';
+import type { Car, Faq } from './types';
 import data from '../data/cars.json';
 
 export const cars: Car[] = data as Car[];
@@ -37,3 +37,16 @@ export const merek = (car: Car): 'OMODA' | 'JAECOO' =>
 
 /** Mobil pre-order ditawari tombol pre-order; yang sudah tersedia tidak. */
 export const sedangPreOrder = (car: Car): boolean => car.status === 'pre-order';
+
+/** FAQ dengan token terisi.
+    Jawaban FAQ boleh memuat {harga}; token itu diganti harga terkini saat
+    build. Dulu angka harga ditulis langsung di dalam teks FAQ, dan saat harga
+    naik teksnya tertinggal — halaman menampilkan dua angka berbeda sekaligus.
+    Dengan token, teks FAQ tidak akan pernah basi lagi. */
+export function faqTerisi(car: Car): Faq[] {
+  const harga = teksHarga(car);
+  return (car.faq ?? []).map((f) => ({
+    tanya: f.tanya,
+    jawab: f.jawab.replace(/\{harga\}/g, harga),
+  }));
+}

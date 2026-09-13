@@ -166,19 +166,15 @@
     ],
     "warna": [
       {
-        "nama": "Vivid Blue",
-        "kode": "#1668c8"
+        "nama": "Stellar Blue",
+        "kode": "#1f5fd0"
       },
       {
-        "nama": "Pearl White",
-        "kode": "#eceff2"
+        "nama": "Radiant White",
+        "kode": "#eef1f4"
       },
       {
-        "nama": "Space Grey",
-        "kode": "#5b6068"
-      },
-      {
-        "nama": "Obsidian Black",
+        "nama": "Nocturne Black",
         "kode": "#15181c"
       }
     ]
@@ -191,7 +187,7 @@
     "powertrain": "ev",
     "status": "tersedia",
     "tagline": "SUV listrik premium: senyap, bertenaga, dan paling hemat biaya energi untuk keseharian di Semarang.",
-    "hargaOtr": 334500000,
+    "hargaOtr": 339900000,
     "gambar": {
       "thumbnail": "/jaecoo-j5-banner.webp",
       "heroDesktop": "/jaecoo-j5-banner.webp",
@@ -221,20 +217,20 @@
     },
     "warna": [
       {
-        "nama": "Hitam",
+        "nama": "Ivory Grey",
+        "kode": "#cfc9bd"
+      },
+      {
+        "nama": "Jet Black",
         "kode": "#15181c"
       },
       {
-        "nama": "Putih",
-        "kode": "#eceff2"
-      },
-      {
-        "nama": "Abu",
-        "kode": "#5b6068"
-      },
-      {
-        "nama": "Hijau",
+        "nama": "Forest Green",
         "kode": "#2c4a3c"
+      },
+      {
+        "nama": "White",
+        "kode": "#eef1f4"
       }
     ],
     "highlight": [
@@ -405,7 +401,7 @@
     "faq": [
       {
         "tanya": "Berapa harga OTR JAECOO J5 EV di Semarang?",
-        "jawab": "Harga OTR Semarang Rp 320,4 juta untuk J5 EV Premium. Hubungi via WhatsApp untuk penawaran dan ketersediaan stok terbaru."
+        "jawab": "Harga OTR Jawa Tengah {harga} untuk varian J5 EV Premium. Angka ini mengikuti pricelist resmi terbaru dan dapat berubah; hubungi kami lewat WhatsApp untuk penawaran serta ketersediaan unitnya."
       },
       {
         "tanya": "Berapa jarak tempuh J5 EV sekali pengisian penuh?",
@@ -445,7 +441,7 @@
     "powertrain": "phev",
     "status": "tersedia",
     "tagline": "Super Hybrid System: irit harian seperti mobil listrik, tenang tanpa cemas untuk jarak jauh.",
-    "hargaOtr": 521900000,
+    "hargaOtr": 526900000,
     "gambar": {
       "thumbnail": "/jaecoo-j7-banner.webp",
       "heroDesktop": "/jaecoo-j7-banner.webp",
@@ -475,20 +471,20 @@
     },
     "warna": [
       {
-        "nama": "Hitam",
+        "nama": "Stone Grey",
+        "kode": "#6b6f73"
+      },
+      {
+        "nama": "Jet Black",
         "kode": "#15181c"
       },
       {
-        "nama": "Putih",
-        "kode": "#eceff2"
-      },
-      {
-        "nama": "Silver",
+        "nama": "Moonlight Silver",
         "kode": "#b9bec4"
       },
       {
-        "nama": "Stone Grey",
-        "kode": "#6b6f73"
+        "nama": "Pristine White 2 Tone",
+        "kode": "#eef1f4"
       }
     ],
     "highlight": [
@@ -630,7 +626,7 @@
       },
       {
         "tanya": "Berapa harga OTR-nya di Semarang?",
-        "jawab": "Harga OTR Semarang Rp 520,4 juta. Hubungi via WhatsApp untuk penawaran terbaik dan ketersediaan unit."
+        "jawab": "Harga OTR Jawa Tengah {harga}. Saat ini pembelian J7 SHS juga mendapat free home charging sebagai penawaran khusus. Konfirmasi lewat WhatsApp untuk memastikan promonya masih berlaku."
       },
       {
         "tanya": "J7 SHS ini wajib dicas atau tidak?",
@@ -807,7 +803,7 @@
     "faq": [
       {
         "tanya": "Berapa harga OTR JAECOO J8 ARDIS di Semarang?",
-        "jawab": "Harga OTR Semarang Rp 710,4 juta. Untuk penawaran khusus dan ketersediaan warna, hubungi via WhatsApp."
+        "jawab": "Harga OTR Jawa Tengah {harga}. Perlu kami sampaikan apa adanya: varian ini tidak tercantum pada pricelist resmi terbaru, jadi sebaiknya dikonfirmasi dulu ketersediaannya sebelum memesan."
       },
       {
         "tanya": "Apa itu sistem ARDIS pada J8?",
@@ -843,7 +839,7 @@
     "powertrain": "phev",
     "status": "tersedia",
     "tagline": "Puncak lineup: plug-in hybrid AWD bertenaga +/- 530 hp, 0-100 km/jam 5,4 detik, jangkauan 1.400 km.",
-    "hargaOtr": 847900000,
+    "hargaOtr": 857900000,
     "gambar": {
       "thumbnail": "/jaecoo-j8-banner-2.webp",
       "heroDesktop": "/jaecoo-j8-banner-2.webp",
@@ -873,20 +869,20 @@
     },
     "warna": [
       {
-        "nama": "Hitam",
-        "kode": "#15181c"
-      },
-      {
-        "nama": "Putih",
-        "kode": "#eceff2"
-      },
-      {
-        "nama": "Silver",
+        "nama": "Moonlight Silver 2 Tone",
         "kode": "#b9bec4"
       },
       {
-        "nama": "Hijau",
-        "kode": "#2c4a3c"
+        "nama": "Jet Black",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Stone Grey 2 Tone",
+        "kode": "#6b6f73"
+      },
+      {
+        "nama": "Pristine White 2 Tone",
+        "kode": "#eef1f4"
       }
     ],
     "highlight": [
@@ -1009,7 +1005,7 @@
       },
       {
         "tanya": "Berapa harga OTR-nya di Semarang?",
-        "jawab": "Harga OTR Semarang Rp 838,5 juta. Hubungi via WhatsApp untuk penawaran terbaik dan ketersediaan unit."
+        "jawab": "Harga OTR Jawa Tengah {harga}. Saat ini pembelian J8 SHS juga mendapat free home charging sebagai penawaran khusus. Konfirmasi lewat WhatsApp untuk memastikan promonya masih berlaku."
       },
       {
         "tanya": "Apakah bisa test drive flagship ini?",

@@ -6,7 +6,7 @@
    Panel harga di kanan tetap menempel saat digulir.
    ============================================================================ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllCars, labelStatus, teksHarga, punyaHarga, merek, sedangPreOrder } from '../../lib/cars';
+import { getAllCars, labelStatus, teksHarga, punyaHarga, merek, sedangPreOrder, faqTerisi } from '../../lib/cars';
 import { site } from '../../lib/site';
 import { waLink, pesanPreOrder, pesanTestDrive, pesanPenawaran } from '../../lib/whatsapp';
 import type { Car } from '../../lib/types';
@@ -47,10 +47,12 @@ const skema = {
   }),
 };
 
-const faqSkema = car.faq && car.faq.length > 0 ? {
+const faqList = faqTerisi(car);
+
+const faqSkema = faqList.length > 0 ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: car.faq.map((f) => ({
+  mainEntity: faqList.map((f) => ({
     '@type': 'Question',
     name: f.tanya,
     acceptedAnswer: { '@type': 'Answer', text: f.jawab },
@@ -141,10 +143,10 @@ const remah = {
           ))}
         </div>
 
-        {car.faq && car.faq.length > 0 && (
+        {faqList.length > 0 && (
           <>
             <h2 class="sec-title sec-title--kiri">Pertanyaan Umum</h2>
-            {car.faq.map((f) => (
+            {faqList.map((f) => (
               <details class="faq"><summary>{f.tanya}</summary><p>{f.jawab}</p></details>
             ))}
           </>
