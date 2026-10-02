@@ -53,12 +53,28 @@ const gambarOg = new URL(ogImage, Astro.site).href;
 const skemaGlobal = [
   {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    /* AutoDealer, bukan Organization: tipe ini turunan LocalBusiness, jadi
+       dibaca sebagai bisnis fisik dengan alamat, jam buka, dan wilayah
+       layanan. `areaServed` menghubungkan situs ini dengan pencarian
+       bernama kota di sekitarnya. */
+    '@type': 'AutoDealer',
     '@id': new URL('/#organisasi', Astro.site).href,
     name: site.dealerName,
     url: new URL('/', Astro.site).href,
     logo: new URL('/logo-omoda-jaecoo.png', Astro.site).href,
+    image: new URL('/og-omoda-04.jpg', Astro.site).href,
     telephone: '+' + site.whatsapp,
+    priceRange: 'Rp',
+    areaServed: site.areaLayanan.map((k) => ({
+      '@type': 'City',
+      name: k.kota.replace(/\s*\(.*\)$/, ''),
+    })),
+    openingHoursSpecification: site.openingHours.map((j) => ({
+      '@type': 'OpeningHoursSpecification',
+      description: j.hari,
+      opens: j.buka,
+      closes: j.tutup,
+    })),
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.street,
