@@ -69,7 +69,13 @@ const remah = {
 };
 ---
 
-<BaseLayout judul={car.nama} deskripsi={deskripsi} skema={faqSkema ? [skema, remah, faqSkema] : [skema, remah]}>
+<BaseLayout judul={car.nama} deskripsi={deskripsi} skema={[
+    /* Product dilewati saat harga belum keluar: Google menolak Product
+       tanpa offers/review/aggregateRating, dan offers wajib punya price. */
+    ...(punyaHarga(car) ? [skema] : []),
+    remah,
+    ...(faqSkema ? [faqSkema] : []),
+  ]}>
   <section class="judul">
     <div class="wrap">
       <p class="eyebrow">{merek(car)} &middot; {labelStatus(car)} &middot; {car.kategori}</p>
