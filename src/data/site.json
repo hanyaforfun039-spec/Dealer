@@ -71,27 +71,27 @@
   "event": {
     "aktif": true,
     "eyebrow": "Pameran",
-    "judul": "Pre-Book di GIIAS 2026",
-    "teks": "Jumpai OMODA 04 EV langsung di pameran otomotif terbesar tahun ini. Pemesanan JAECOO J5 selama event berlangsung juga mendapat free body kit.",
+    "judul": "GAIKINDO Auto Week 2026 Semarang",
+    "teks": "GAIKINDO Auto Week digelar serentak di sepuluh kota. Semarang kebagian 25-29 November di 23 Mall. Kami bantu konsultasi, simulasi biaya, dan pemesanan selama pekan pameran, baik Anda datang ke pameran maupun tidak.",
     "gambar": "/poster-giias.jpeg",
     "lebar": 854,
     "tinggi": 1280,
     "meta": [
       {
-        "label": "Tanggal",
-        "nilai": "30 Juli - 9 Agustus 2026"
+        "label": "Semarang",
+        "nilai": "25-29 November 2026, Downtown Atrium 23 Mall"
       },
       {
-        "label": "Lokasi",
-        "nilai": "ICE BSD City"
+        "label": "Pusat",
+        "nilai": "20-29 November 2026, ICE BSD City Tangerang"
       },
       {
-        "label": "Promo J5",
-        "nilai": "Free body kit (front bumper, side skirt, rear bumper)"
+        "label": "OMODA 04",
+        "nilai": "Pre-book dibuka, harga resmi belum diumumkan"
       }
     ],
-    "ctaLabel": "Tanya Pre-Book GIIAS",
-    "ctaPesan": "Halo, saya mau ikut pre-book OMODA 04 EV di GIIAS 2026. Boleh dibantu prosesnya dari Semarang?"
+    "ctaLabel": "Tanya Jadwal & Pemesanan",
+    "ctaPesan": "Halo, saya mau tanya soal GAIKINDO Auto Week 2026 di Semarang. Boleh dibantu info jadwal dan pemesanannya?"
   },
   "layanan": [
     {
