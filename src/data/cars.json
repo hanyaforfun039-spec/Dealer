@@ -647,6 +647,297 @@
     ]
   },
   {
+    "slug": "j7-shs-p-sivp",
+    "nama": "JAECOO J7 SHS-P SIVP",
+    "namaPendek": "J7 SIVP",
+    "kategori": "SUV Hybrid Plug-in",
+    "powertrain": "phev",
+    "status": "tersedia",
+    "tagline": "Varian J7 dengan parkir otomatis: LiDAR 128 channel dan kamera 540 derajat membaca ruang parkir untuk Anda.",
+    "hargaOtr": null,
+    "hargaCatatan": "Baru diluncurkan. Harga OTR Jawa Tengah sedang dikonfirmasi — hubungi kami.",
+    "gambar": {
+      "thumbnail": "/jaecoo-j7-banner.webp",
+      "heroDesktop": "/jaecoo-j7-banner.webp",
+      "heroMobile": "/jaecoo-j7-banner.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j7-banner.webp",
+          "alt": "JAECOO J7 SHS-P SIVP tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j7-silver.webp",
+          "alt": "JAECOO J7 warna Moonlight Silver.",
+          "judul": "Silver"
+        },
+        {
+          "src": "/jaecoo-j7-white.webp",
+          "alt": "JAECOO J7 warna Pristine White.",
+          "judul": "Putih"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Stone Grey",
+        "kode": "#6b6f73"
+      },
+      {
+        "nama": "Jet Black",
+        "kode": "#15181c"
+      },
+      {
+        "nama": "Moonlight Silver",
+        "kode": "#b9bec4"
+      },
+      {
+        "nama": "Pristine White 2 Tone",
+        "kode": "#eef1f4"
+      }
+    ],
+    "highlight": [
+      "SIVP: parkir otomatis, mobil mencari dan memasuki ruang parkir sendiri",
+      "LiDAR dToF 128 channel, radar gelombang milimeter, dan kamera 540 derajat",
+      "27 sensor dan kamera membaca sekeliling kendaraan",
+      "Penggerak roda depan",
+      "Mode listrik hingga 80 km untuk pemakaian harian"
+    ],
+    "angka": [
+      {
+        "nilai": "1.5",
+        "satuan": "TGDI",
+        "label": "Mesin"
+      },
+      {
+        "nilai": "18,3",
+        "satuan": "kWh",
+        "label": "Baterai"
+      },
+      {
+        "nilai": "80",
+        "satuan": "km",
+        "label": "Mode Listrik"
+      },
+      {
+        "nilai": "128",
+        "satuan": "channel",
+        "label": "LiDAR dToF"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Powertrain",
+        "items": [
+          {
+            "label": "Sistem",
+            "value": "Super Hybrid System Plug-in (SHS-P)"
+          },
+          {
+            "label": "Mesin",
+            "value": "1.5 TGDI"
+          },
+          {
+            "label": "Baterai",
+            "value": "18,3 kWh"
+          }
+        ]
+      },
+      {
+        "kategori": "Jarak Tempuh",
+        "items": [
+          {
+            "label": "Mode Listrik",
+            "value": "Hingga 80 km"
+          },
+          {
+            "label": "Jangkauan Gabungan",
+            "value": "Diklaim di atas 1.000 km"
+          }
+        ]
+      },
+      {
+        "kategori": "Bantuan Berkendara",
+        "items": [
+          {
+            "label": "Parkir Otomatis",
+            "value": "SIVP (berlangganan, tahun pertama termasuk harga beli)"
+          },
+          {
+            "label": "LiDAR",
+            "value": "dToF 128 channel"
+          },
+          {
+            "label": "Radar",
+            "value": "Gelombang milimeter"
+          },
+          {
+            "label": "Kamera",
+            "value": "540 derajat"
+          },
+          {
+            "label": "Sensor & Kamera",
+            "value": "27 titik"
+          }
+        ]
+      },
+      {
+        "kategori": "Penggerak",
+        "items": [
+          {
+            "label": "Tipe",
+            "value": "Roda depan (FWD)"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Apa itu SIVP?",
+        "jawab": "Sistem parkir otomatis. Mobil membaca ruang parkir memakai LiDAR, radar, dan kamera 540 derajat, lalu memarkir sendiri. Fiturnya berlangganan; tahun pertama sudah termasuk dalam harga beli."
+      },
+      {
+        "tanya": "Bedanya dengan J7 SHS yang sudah ada?",
+        "jawab": "J7 SHS memakai sistem hybrid tanpa colok. Varian SHS-P bisa diisi dari luar dan berjalan penuh listrik sampai sekitar 80 km, dan varian SIVP menambahkan perangkat parkir otomatis."
+      },
+      {
+        "tanya": "Berapa harganya di Jawa Tengah?",
+        "jawab": "Varian ini baru diluncurkan dan harga OTR Jawa Tengah sedang dikonfirmasi. Hubungi kami lewat WhatsApp untuk angka terbaru dan ketersediaan unitnya."
+      }
+    ]
+  },
+  {
+    "slug": "j7-shs-p-ardis-black-edition",
+    "nama": "JAECOO J7 SHS-P ARDIS Black Edition",
+    "namaPendek": "J7 ARDIS Black Edition",
+    "kategori": "SUV Hybrid Plug-in AWD",
+    "powertrain": "phev",
+    "status": "tersedia",
+    "tagline": "J7 bertenaga empat roda dengan enam mode berkendara, sampai pasir dan salju.",
+    "hargaOtr": null,
+    "hargaCatatan": "Baru diluncurkan. Harga OTR Jawa Tengah sedang dikonfirmasi — hubungi kami.",
+    "gambar": {
+      "thumbnail": "/jaecoo-j7-black.webp",
+      "heroDesktop": "/jaecoo-j7-black.webp",
+      "heroMobile": "/jaecoo-j7-black.webp",
+      "galeri": [
+        {
+          "src": "/jaecoo-j7-black.webp",
+          "alt": "JAECOO J7 ARDIS Black Edition warna hitam.",
+          "judul": "Jet Black"
+        },
+        {
+          "src": "/jaecoo-j7-banner.webp",
+          "alt": "JAECOO J7 tampak depan.",
+          "judul": "Tampak Depan"
+        },
+        {
+          "src": "/jaecoo-j7-stonegrey.webp",
+          "alt": "JAECOO J7 warna Stone Grey.",
+          "judul": "Stone Grey"
+        }
+      ]
+    },
+    "warna": [
+      {
+        "nama": "Jet Black",
+        "kode": "#15181c"
+      }
+    ],
+    "highlight": [
+      "Penggerak empat roda lewat tambahan motor listrik di belakang",
+      "Enam mode berkendara: Eco, Normal, Sport, Off-road, Sand, dan Snow",
+      "Mode listrik hingga 80 km untuk pemakaian harian",
+      "Jangkauan gabungan diklaim di atas 1.000 km",
+      "Tampilan Black Edition"
+    ],
+    "angka": [
+      {
+        "nilai": "1.5",
+        "satuan": "TGDI",
+        "label": "Mesin"
+      },
+      {
+        "nilai": "18,3",
+        "satuan": "kWh",
+        "label": "Baterai"
+      },
+      {
+        "nilai": "80",
+        "satuan": "km",
+        "label": "Mode Listrik"
+      },
+      {
+        "nilai": "6",
+        "satuan": "mode",
+        "label": "Mode Berkendara"
+      }
+    ],
+    "specs": [
+      {
+        "kategori": "Powertrain",
+        "items": [
+          {
+            "label": "Sistem",
+            "value": "Super Hybrid System Plug-in (SHS-P)"
+          },
+          {
+            "label": "Mesin",
+            "value": "1.5 TGDI"
+          },
+          {
+            "label": "Baterai",
+            "value": "18,3 kWh"
+          }
+        ]
+      },
+      {
+        "kategori": "Jarak Tempuh",
+        "items": [
+          {
+            "label": "Mode Listrik",
+            "value": "Hingga 80 km"
+          },
+          {
+            "label": "Jangkauan Gabungan",
+            "value": "Diklaim di atas 1.000 km"
+          }
+        ]
+      },
+      {
+        "kategori": "Penggerak",
+        "items": [
+          {
+            "label": "Tipe",
+            "value": "Empat roda (AWD)"
+          },
+          {
+            "label": "Motor Belakang",
+            "value": "Tersedia"
+          },
+          {
+            "label": "Mode Berkendara",
+            "value": "Eco, Normal, Sport, Off-road, Sand, Snow"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "tanya": "Apa bedanya dengan J7 ARDIS biasa?",
+        "jawab": "Black Edition memakai sistem hybrid plug-in SHS-P dan menambahkan motor listrik di belakang sehingga bertenaga empat roda, lengkap dengan enam mode berkendara termasuk Off-road, Sand, dan Snow."
+      },
+      {
+        "tanya": "Apakah benar-benar bisa dipakai off-road?",
+        "jawab": "Mode Off-road, Sand, dan Snow mengatur pembagian tenaga ke empat roda untuk permukaan yang licin atau lepas. Ini SUV jalan raya berpenggerak empat roda, bukan kendaraan off-road khusus."
+      },
+      {
+        "tanya": "Berapa harganya di Jawa Tengah?",
+        "jawab": "Varian ini baru diluncurkan dan harga OTR Jawa Tengah sedang dikonfirmasi. Hubungi kami lewat WhatsApp untuk angka terbaru dan ketersediaan unitnya."
+      }
+    ]
+  },
+  {
     "slug": "j8-ardis",
     "nama": "JAECOO J8 ARDIS",
     "namaPendek": "J8 ARDIS",

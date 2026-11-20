@@ -6,10 +6,10 @@
    pun ("gaikindo auto week semarang", "gaw 2026 semarang"), dan isinya layak
    berita sehingga biasanya cepat dirayapi.
 
-   BATAS YANG DIJAGA: halaman ini HANYA memuat keterangan yang diperiksa
-   langsung ke sumbernya. Yang belum terverifikasi sengaja tidak ditulis:
-     - bahwa harga OMODA 04 akan diumumkan di acara ini (tidak ada satu sumber
-       pun yang menyebutnya),
+   BATAS YANG DIJAGA: jadwal dan lokasi diperiksa langsung ke pemberitaan.
+   Bahwa harga OMODA 04 diumumkan di acara ini berasal dari keterangan
+   principal, bukan pemberitaan — karena itu catatan di bawah halaman menyebut
+   waktu pengumuman dapat berubah. Yang masih belum ada sengaja tidak ditulis:
      - keberadaan dan nomor booth dealer ini di GAW Semarang,
      - jam buka venue Semarang,
      - promo khusus selama pameran.
@@ -25,11 +25,11 @@ const kota = site.address.locality;
 const cars = getAllCars();
 const berharga = cars.filter(punyaHarga);
 
-const judul = 'GAIKINDO Auto Week 2026 Semarang';
+const judul = 'Harga OMODA 04 Dirilis di GAIKINDO Auto Week 2026 Semarang';
 const deskripsi =
-  'GAIKINDO Auto Week 2026 digelar di sepuluh kota. Semarang 25-29 November di ' +
-  'Downtown Atrium 23 Mall, pusatnya 20-29 November di ICE BSD City. Jadwal, ' +
-  'lokasi, dan status harga OMODA 04 EV.';
+  'Harga resmi OMODA 04 EV diumumkan di GAIKINDO Auto Week 2026. Semarang ' +
+  '25-29 November di Downtown Atrium 23 Mall, pusatnya 20-29 November di ICE ' +
+  'BSD City. Tinggalkan nomor untuk dikabari begitu angkanya keluar.';
 
 const waPameran = waLink(
   'Halo, saya mau tanya soal GAIKINDO Auto Week 2026 di Semarang. ' +
@@ -91,11 +91,16 @@ const tanya: [string, string][] = [
     '29 November di pusat perbelanjaan.',
   ],
   [
-    'Apakah harga OMODA 04 EV sudah diumumkan?',
-    'Belum. Sampai pemberitaan terakhir, harga OTR resmi OMODA 04 EV di Indonesia ' +
-    'masih belum dirilis, dan belum ada pengumuman resmi soal kapan tepatnya. ' +
-    'Pemesanan awal sudah dibuka. Tinggalkan nomor Anda lewat WhatsApp, kami kabari ' +
-    'begitu angkanya keluar.',
+    'Kapan harga resmi OMODA 04 EV diumumkan?',
+    'Di GAIKINDO Auto Week 2026 ini. Pemesanan awal sudah dibuka sejak pertengahan ' +
+    'tahun, tetapi angka OTR resminya baru dirilis saat pameran. Tinggalkan nomor ' +
+    'Anda lewat WhatsApp, kami kabari begitu angkanya keluar.',
+  ],
+  [
+    'Berapa perkiraan harga OMODA 04 EV?',
+    'Kami tidak menebak. Angka yang beredar sebelum pengumuman resmi hanya perkiraan, ' +
+    'dan menyiapkan anggaran berdasarkan tebakan justru merugikan Anda. Tunggu angka ' +
+    'resminya, dan kami kabari lebih dulu.',
   ],
   [
     'Harus datang ke pameran untuk memesan?',
@@ -124,10 +129,11 @@ const faqSkema = {
         <span aria-current="page">GAIKINDO Auto Week 2026</span>
       </nav>
       <p class="eyebrow">Pameran · 25&ndash;29 November 2026</p>
-      <h1 class="gaw-judul">GAIKINDO Auto Week 2026 Semarang</h1>
+      <h1 class="gaw-judul">Harga OMODA 04 Dirilis di GAIKINDO Auto Week 2026</h1>
       <p class="gaw-lede">
-        Tahun ini GAIKINDO Auto Week digelar serentak di sepuluh kota.
-        Semarang kebagian 25&ndash;29 November di 23 Mall.
+        Penantian harga resmi OMODA 04 EV berakhir di pameran ini. GAIKINDO Auto
+        Week digelar serentak di sepuluh kota; Semarang kebagian 25&ndash;29
+        November di 23 Mall.
       </p>
     </div>
   </section>
@@ -147,16 +153,21 @@ const faqSkema = {
         </article>
       </div>
 
-      <h2>Soal harga OMODA 04 EV</h2>
+      <h2>Harga OMODA 04 EV diumumkan di sini</h2>
       <p>
-        Sampai pemberitaan terakhir, <strong>harga OTR resmi OMODA 04 EV belum
-        diumumkan</strong>, dan belum ada pernyataan resmi soal kapan tepatnya.
-        Kami sengaja tidak menebak angkanya di halaman ini.
+        OMODA 04 EV sudah dibuka pemesanannya sejak pertengahan tahun, tetapi
+        angka resminya belum pernah dirilis. <strong>Harga OTR resmi diumumkan
+        di GAIKINDO Auto Week 2026 ini.</strong>
       </p>
       <p>
-        Pemesanan awal sudah dibuka. Kalau Anda ingin jadi yang pertama tahu,
-        tinggalkan nomor lewat WhatsApp &mdash; kami kabari begitu angka resminya
-        keluar, bukan setelah ramai di mana-mana.
+        Kami sengaja tidak menebak angkanya di halaman ini. Yang beredar selama
+        ini hanya perkiraan, dan menebak harga mobil yang belum diumumkan hanya
+        membuat orang salah menyiapkan anggaran.
+      </p>
+      <p>
+        Kalau Anda ingin jadi yang pertama tahu, tinggalkan nomor lewat WhatsApp
+        &mdash; kami kabari begitu angka resminya keluar, bukan setelah ramai di
+        mana-mana.
       </p>
       <p>
         <a class="btn btn--dark" href={waHarga} target="_blank" rel="noopener">
@@ -198,8 +209,8 @@ const faqSkema = {
 
       <p class="gaw-sumber">
         Jadwal dan lokasi dirangkum dari pemberitaan GAIKINDO Auto Week 2026.
-        Jadwal pameran dapat berubah sewaktu-waktu; konfirmasi lewat WhatsApp
-        sebelum berangkat.
+        Jadwal pameran maupun waktu pengumuman harga dapat berubah sewaktu-waktu;
+        konfirmasi lewat WhatsApp sebelum berangkat.
       </p>
     </div>
   </section>

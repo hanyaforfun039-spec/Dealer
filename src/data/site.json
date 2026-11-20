@@ -71,8 +71,8 @@
   "event": {
     "aktif": true,
     "eyebrow": "Pameran",
-    "judul": "GAIKINDO Auto Week 2026 Semarang",
-    "teks": "GAIKINDO Auto Week digelar serentak di sepuluh kota. Semarang kebagian 25-29 November di 23 Mall. Kami bantu konsultasi, simulasi biaya, dan pemesanan selama pekan pameran, baik Anda datang ke pameran maupun tidak.",
+    "judul": "Harga OMODA 04 Dirilis di GAIKINDO Auto Week 2026",
+    "teks": "Harga resmi OMODA 04 EV diumumkan di GAIKINDO Auto Week 2026. Semarang kebagian 25-29 November di 23 Mall. Tinggalkan nomor Anda, kami kabari begitu angkanya keluar.",
     "gambar": "/poster-giias.jpeg",
     "lebar": 854,
     "tinggi": 1280,
@@ -87,11 +87,11 @@
       },
       {
         "label": "OMODA 04",
-        "nilai": "Pre-book dibuka, harga resmi belum diumumkan"
+        "nilai": "Harga resmi diumumkan di pameran ini"
       }
     ],
-    "ctaLabel": "Tanya Jadwal & Pemesanan",
-    "ctaPesan": "Halo, saya mau tanya soal GAIKINDO Auto Week 2026 di Semarang. Boleh dibantu info jadwal dan pemesanannya?"
+    "ctaLabel": "Kabari Saya Saat Harga Keluar",
+    "ctaPesan": "Halo, saya mau dikabari begitu harga resmi OMODA 04 EV diumumkan di GAIKINDO Auto Week 2026. Mohon dicatat nomor saya."
   },
   "layanan": [
     {
