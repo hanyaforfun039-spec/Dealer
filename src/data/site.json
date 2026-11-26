@@ -36,20 +36,20 @@
     "modelPenutup": "Lihat spesifikasi lengkap, pilihan warna, dan galeri fotonya di sini."
   },
   "promoPopup": {
-    "aktif": false,
-    "gambar": "/poster-pre-order.jpeg",
-    "lebar": 735,
-    "tinggi": 900,
-    "alt": "Reward pre-order OMODA 04 EV: gratis upgrade senilai hingga IDR 50 juta untuk 1.000 pemesan pertama.",
-    "ctaLabel": "Klaim Reward Pre-Order",
-    "ctaPesan": "Halo, saya mau ikut pre-order OMODA 04 EV dan masuk kuota 1.000 pertama. Boleh dibantu prosesnya?"
+    "aktif": true,
+    "gambar": "/gaw-2026-semarang.webp",
+    "lebar": 1000,
+    "tinggi": 1415,
+    "alt": "Poster GAIKINDO Auto Week 2026 OMODA JAECOO Sun Semarang. 23 Mall Semarang, 25-29 November 2026. Bonus: free body kit J5 EV Premium senilai 20 juta, free physical button 2 juta, harga khusus wall charge 3in1, dan free subwoofer 3 juta.",
+    "ctaLabel": "Tanya Promo GAW",
+    "ctaPesan": "Halo, saya mau tanya promo GAIKINDO Auto Week 2026 di 23 Mall Semarang. Boleh dibantu infonya?"
   },
   "floatingPromo": {
-    "aktif": false,
-    "gambar": "/poster-giias.jpeg",
-    "alt": "Pre-book OMODA 04 EV di GIIAS 2026.",
-    "ctaLabel": "Pre-Order Sekarang",
-    "ctaPesan": "Halo, saya mau pre-order OMODA 04 EV sekarang."
+    "aktif": true,
+    "gambar": "/gaw-2026-semarang.webp",
+    "alt": "Poster GAIKINDO Auto Week 2026 OMODA JAECOO Sun Semarang. 23 Mall Semarang, 25-29 November 2026. Bonus: free body kit J5 EV Premium senilai 20 juta, free physical button 2 juta, harga khusus wall charge 3in1, dan free subwoofer 3 juta.",
+    "ctaLabel": "Promo GAW 2026",
+    "ctaPesan": "Halo, saya mau tanya promo GAIKINDO Auto Week 2026 di 23 Mall Semarang. Boleh dibantu infonya?"
   },
   "reward": {
     "eyebrow": "Pre-Order Online Exclusive",
@@ -73,9 +73,9 @@
     "eyebrow": "Pameran",
     "judul": "Harga OMODA 04 Dirilis di GAIKINDO Auto Week 2026",
     "teks": "Harga resmi OMODA 04 EV diumumkan di GAIKINDO Auto Week 2026. Semarang kebagian 25-29 November di 23 Mall. Tinggalkan nomor Anda, kami kabari begitu angkanya keluar.",
-    "gambar": "/poster-giias.jpeg",
-    "lebar": 854,
-    "tinggi": 1280,
+    "gambar": "/gaw-2026-semarang.webp",
+    "lebar": 1000,
+    "tinggi": 1415,
     "meta": [
       {
         "label": "Semarang",

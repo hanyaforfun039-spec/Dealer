@@ -192,6 +192,36 @@ const faqSkema = {
         ))}
       </ul>
 
+
+      <h2>Bonus selama pameran</h2>
+      <p>
+        OMODA | JAECOO Sun Semarang membawa empat bonus selama GAIKINDO Auto Week
+        2026. Berlaku untuk pembelian pada periode pameran:
+      </p>
+      <ul class="gaw-bonus">
+        <li>
+          <strong>Free paket genuine body kit</strong> untuk JAECOO J5 EV Premium &mdash;
+          5 item, senilai Rp 20 juta.
+        </li>
+        <li>
+          <strong>Free special button</strong> &mdash; senilai Rp 2 juta.
+        </li>
+        <li>
+          <strong>Genuine wall charge 3in1 seharga Rp 3 juta</strong> &mdash;
+          harga resminya Rp 10 juta.
+        </li>
+        <li>
+          <strong>Free subwoofer senilai Rp 3 juta</strong> &mdash; untuk pembelian
+          cash lewat ONNA atau MAXIMUS yang mengikuti program asuransi komplit.
+        </li>
+      </ul>
+      <p class="gaw-sk">Periode 20&ndash;29 November 2026. Syarat dan ketentuan berlaku.</p>
+      <figure class="gaw-poster">
+        <img src="/gaw-2026-bonus.webp" width="1000" height="1415" loading="lazy" decoding="async"
+             alt="Rincian Special Customer Bonus GAIKINDO Auto Week 2026 OMODA JAECOO Sun Semarang: free paket genuine body kit 5 item senilai 20 juta, free special button 2 juta, genuine wall charge 3in1 seharga 3 juta dari harga resmi 10 juta, dan free subwoofer 3 juta untuk pembelian cash via ONNA atau MAXIMUS dengan asuransi komplit." />
+        <figcaption>Poster resmi Special Customer Bonus, periode 20&ndash;29 November 2026.</figcaption>
+      </figure>
+
       <h2>Pertanyaan umum</h2>
       {tanya.map(([q, a]) => (
         <details class="faq">
@@ -269,4 +299,11 @@ const faqSkema = {
     .gaw-head { padding-top: 150px; }
     .gaw-kartu { grid-template-columns: 1fr 1fr; gap: 18px; }
   }
+
+  .gaw-bonus { list-style: none; margin-top: 14px; display: grid; gap: 1px; background: var(--line); }
+  .gaw-bonus li { background: var(--paper); padding: 13px 2px; line-height: 1.6; }
+  .gaw-sk { margin-top: 12px; font-size: 13px; color: var(--silver); }
+  .gaw-poster { margin-top: 22px; }
+  .gaw-poster img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+  .gaw-poster figcaption { margin-top: 8px; font-size: 13px; color: var(--silver); }
 </style>
